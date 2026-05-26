@@ -198,6 +198,26 @@
     .hl-text strong { display: block; font-weight: 500; }
     .hl-text span { font-size: 12px; color: var(--muted); }
 
+    /* ── STATUS DOTS ── */
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+    .dot-green  { background: var(--green); }
+    .dot-yellow { background: var(--yellow); }
+    .dot-red    { background: var(--red); }
+    .dot-blue   { background: var(--blue); }
+    .dot-gray   { background: #bbb; }
+
+    /* ── KPI value colors ── */
+    .kpi-value.val-green { color: var(--green); }
+    .kpi-value.val-red   { color: var(--red); }
+    .kpi-value.val-blue  { color: var(--blue); }
+
     /* ── CHECKLIST ── */
     .checklist { list-style: none; }
     .checklist li {
@@ -311,43 +331,180 @@
     </div>
   </div>
 
-  <!-- KPI CARDS -->
+  <!-- KPI CARDS — SOCIAL & WEB -->
+  <!-- UPDATE: website sessions, follower count, top post each month -->
   <div class="section">
     <div class="section-title">Performance at a Glance — May 2026</div>
     <div class="kpi-grid">
 
-      <!-- UPDATE: website sessions each month -->
       <div class="kpi-card">
         <div class="kpi-label">Website Sessions</div>
         <div class="kpi-value">400<sup>+</sup></div>
         <div class="kpi-trend trend-flat">→ Baseline established</div>
-        <div class="kpi-note">Fire safety blog: 168 views · Top page</div>
+        <div class="kpi-note">🟡 Fire safety blog: 168 views · Top page</div>
       </div>
 
-      <!-- UPDATE: Instagram follower count -->
       <div class="kpi-card">
         <div class="kpi-label">Instagram Followers</div>
-        <div class="kpi-value">366</div>
+        <div class="kpi-value val-red">366</div>
         <div class="kpi-trend trend-down">↓ Net –9 over 3 months</div>
-        <div class="kpi-note">Existing account · Engagement strategy not yet active</div>
+        <div class="kpi-note">🔴 Existing account · Engagement strategy not yet active</div>
       </div>
 
-      <!-- UPDATE: FB avg reach per post -->
       <div class="kpi-card">
         <div class="kpi-label">Facebook Avg. Reach / Post</div>
-        <div class="kpi-value">~200</div>
+        <div class="kpi-value val-blue">~200</div>
         <div class="kpi-trend trend-new">★ New page · Distribution working</div>
-        <div class="kpi-note">13 posts published · Engagement: near-zero (format issue)</div>
+        <div class="kpi-note">🔵 13 posts · Reach good · Engagement near-zero (format issue)</div>
       </div>
 
-      <!-- UPDATE: top post views -->
       <div class="kpi-card">
         <div class="kpi-label">Top Social Post Views</div>
-        <div class="kpi-value">60</div>
+        <div class="kpi-value val-green">60</div>
         <div class="kpi-trend trend-up">↑ "3 signs your windows…"</div>
-        <div class="kpi-note">List format outperforms lifestyle posts 3:1</div>
+        <div class="kpi-note">🟢 List format outperforms lifestyle posts 3:1</div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- KPI CARDS — EMAIL MARKETING -->
+  <!-- UPDATE: update after each email send -->
+  <div class="section">
+    <div class="section-title">Email Marketing Performance — Jan–May 2026</div>
+    <div class="kpi-grid">
+
+      <div class="kpi-card">
+        <div class="kpi-label">Email List Size</div>
+        <div class="kpi-value val-green">699</div>
+        <div class="kpi-trend trend-up">↑ Grew from 555 → 699 subscribers</div>
+        <div class="kpi-note">🟢 Newsletter signup confirmed live on website</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Best Email Open Rate</div>
+        <div class="kpi-value val-green">42%</div>
+        <div class="kpi-trend trend-up">↑ "3 Ways to Improve Comfort…" · List format wins</div>
+        <div class="kpi-note">🟢 Industry avg: ~20–25% · We are nearly 2× that</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Best Click Rate</div>
+        <div class="kpi-value val-blue">3%</div>
+        <div class="kpi-trend trend-flat">→ Industry avg: 2–3% · On target</div>
+        <div class="kpi-note">🟡 Grow with stronger CTAs in June sends</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Emails Sent (Total)</div>
+        <div class="kpi-value">2</div>
+        <div class="kpi-trend trend-new">★ Both sent Jan–May 2026</div>
+        <div class="kpi-note">🟡 Email 2 had 21 unsubs — monitor list health</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WHAT'S WORKING + WHAT TO WATCH -->
+  <div class="section two-col">
+
+    <div class="highlight-card">
+      <h3>✅ What's Working</h3>
+      <ul class="highlight-list">
+        <li>
+          <span class="hl-icon">🔥</span>
+          <div class="hl-text">
+            <strong>Fire Safety Blog Post</strong>
+            <span>168 views, 129 unique visitors since Jan — #1 SEO performer by far</span>
+          </div>
+        </li>
+        <li>
+          <span class="hl-icon">📋</span>
+          <div class="hl-text">
+            <strong>List-Format Posts Win on All Channels</strong>
+            <span>"3 signs your windows…" = 60 views (3× avg). "3 Ways to Improve…" email = 42% open rate. List format is data-confirmed across social and email</span>
+          </div>
+        </li>
+        <li>
+          <span class="hl-icon">📧</span>
+          <div class="hl-text">
+            <strong>Email Open Rate at 42%</strong>
+            <span>Nearly 2× industry average. 699 subscribers. Newsletter signup live on website and growing</span>
+          </div>
+        </li>
+        <li>
+          <span class="hl-icon">🌐</span>
+          <div class="hl-text">
+            <strong>Facebook Reach Working</strong>
+            <span>New page reaching 190–260 per post organically — platform is distributing content</span>
+          </div>
+        </li>
+        <li>
+          <span class="hl-icon">🎯</span>
+          <div class="hl-text">
+            <strong>Right Audience In Place</strong>
+            <span>35–44 year old homeowners, active 8am–5pm daily — exactly who we want</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="highlight-card">
+      <h3>⚠️ What to Watch</h3>
+      <ul class="highlight-list">
+        <li>
+          <span class="hl-icon">👆</span>
+          <div class="hl-text">
+            <strong>Zero Engagement on Facebook</strong>
+            <span>People are seeing posts but not reacting — first line of every post needs a stronger hook</span>
+          </div>
+        </li>
+        <li>
+          <span class="hl-icon">📉</span>
+          <div class="hl-text">
+            <strong>Instagram Follower Decline</strong>
+            <span>Net –9 followers over 3 months — no audience-building activity yet in place</span>
+          </div>
+        </li>
+        <li>
+          <span class="hl-icon">📧</span>
+          <div class="hl-text">
+            <strong>Email Unsubscribes on Send #2</strong>
+            <span>21 unsubscribes on the second send — keep this below 0.5% of list per send (≈3–4 per send is healthy)</span>
+          </div>
+        </li>
+        <li>
+          <span class="hl-icon">🎬</span>
+          <div class="hl-text">
+            <strong>No Reels / Video</strong>
+            <span>Algorithmic gap — being addressed with carousel strategy in June</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- KEY INSIGHTS -->
+  <div class="section">
+    <div class="section-title">Strategic Signals This Month</div>
+    <div class="insight-row">
+      <div class="insight-chip">
+        <div class="label">Content Format Signal</div>
+        <p>List-format posts outperform lifestyle/brochure posts 3:1 on views. Shift at least 40% of monthly posts to list or multi-point format.</p>
+      </div>
+      <div class="insight-chip">
+        <div class="label">SEO Signal</div>
+        <p>Fire safety and local SoCal angles are confirmed search drivers. One targeted blog post outperformed 3 months of social combined.</p>
+      </div>
+      <div class="insight-chip">
+        <div class="label">Email Signal</div>
+        <p>42% open rate on list-format subject lines vs. 30% on single-topic — confirms the same content rule applies to email as to social posts.</p>
+      </div>
+      <div class="insight-chip">
+        <div class="label">Audience Signal</div>
+        <p>Core demographic is 35–44 homeowners — ideal for home improvement. They're present but need a reason to stop scrolling.</p>
+      </div>
     </div>
   </div>
 
@@ -424,7 +581,7 @@
               <th>Posts (Month)</th>
               <th>Avg Reach</th>
               <th>Engagement</th>
-              <th>Followers</th>
+              <th>Followers / List</th>
               <th>Priority</th>
               <th>Status</th>
             </tr>
@@ -467,6 +624,15 @@
               <td><span class="pill pill-blue">New · Baseline</span></td>
             </tr>
             <tr>
+              <td><strong>Email Newsletter</strong></td>
+              <td class="num">2 emails</td>
+              <td>699 subscribers</td>
+              <td>42% open · 3% click</td>
+              <td class="num">699</td>
+              <td>Grow list · list-format CTAs</td>
+              <td><span class="pill pill-green">✓ On Track</span></td>
+            </tr>
+            <tr>
               <td><strong>Website / Blog</strong></td>
               <td class="num">4 posts</td>
               <td>482 homepage views</td>
@@ -477,102 +643,6 @@
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- WHAT'S WORKING + WHAT TO WATCH -->
-  <div class="section two-col">
-
-    <div class="highlight-card">
-      <h3>✅ What's Working</h3>
-      <ul class="highlight-list">
-        <li>
-          <span class="hl-icon">🔥</span>
-          <div class="hl-text">
-            <strong>Fire Safety Blog Post</strong>
-            <span>168 views, 129 unique visitors since Jan — #1 SEO performer by far</span>
-          </div>
-        </li>
-        <li>
-          <span class="hl-icon">📋</span>
-          <div class="hl-text">
-            <strong>List-Format Social Posts</strong>
-            <span>"3 signs your windows…" hit 60 views — 3× avg. List format is the data-confirmed winner</span>
-          </div>
-        </li>
-        <li>
-          <span class="hl-icon">🌐</span>
-          <div class="hl-text">
-            <strong>Facebook Reach Working</strong>
-            <span>New page reaching 190–260 per post organically — platform is distributing content</span>
-          </div>
-        </li>
-        <li>
-          <span class="hl-icon">🎯</span>
-          <div class="hl-text">
-            <strong>Right Audience In Place</strong>
-            <span>35–44 year old homeowners, active 8am–5pm daily — exactly who we want</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="highlight-card">
-      <h3>⚠️ What to Watch</h3>
-      <ul class="highlight-list">
-        <li>
-          <span class="hl-icon">👆</span>
-          <div class="hl-text">
-            <strong>Zero Engagement on Facebook</strong>
-            <span>People are seeing posts but not reacting — first line of every post needs a stronger hook</span>
-          </div>
-        </li>
-        <li>
-          <span class="hl-icon">📉</span>
-          <div class="hl-text">
-            <strong>Instagram Follower Decline</strong>
-            <span>Net –9 followers over 3 months — no audience-building activity yet in place</span>
-          </div>
-        </li>
-        <li>
-          <span class="hl-icon">📧</span>
-          <div class="hl-text">
-            <strong>Newsletter List Size Unknown</strong>
-            <span>No open rate or subscriber count available yet — need Wix email data exported</span>
-          </div>
-        </li>
-        <li>
-          <span class="hl-icon">🎬</span>
-          <div class="hl-text">
-            <strong>No Reels / Video</strong>
-            <span>Algorithmic gap — being addressed with carousel strategy in June</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- KEY INSIGHTS -->
-  <div class="section">
-    <div class="section-title">Strategic Signals This Month</div>
-    <div class="insight-row">
-      <div class="insight-chip">
-        <div class="label">Content Format Signal</div>
-        <p>List-format posts outperform lifestyle/brochure posts 3:1 on views. Shift at least 40% of monthly posts to list or multi-point format.</p>
-      </div>
-      <div class="insight-chip">
-        <div class="label">SEO Signal</div>
-        <p>Fire safety and local SoCal angles are confirmed search drivers. One targeted blog post outperformed 3 months of social combined.</p>
-      </div>
-      <div class="insight-chip">
-        <div class="label">Timing Signal</div>
-        <p>Audience is most active Mon–Sun, 8am–5pm, peaking at 3–4pm. Posting consistently in this window will improve organic reach.</p>
-      </div>
-      <div class="insight-chip">
-        <div class="label">Audience Signal</div>
-        <p>Core demographic is 35–44 homeowners — ideal for home improvement. They're present but need a reason to stop scrolling.</p>
       </div>
     </div>
   </div>
@@ -606,8 +676,8 @@
         <li>
           <div class="action-num">1</div>
           <div class="action-body">
-            <strong>Spend 15 minutes per day engaging on Instagram + Facebook</strong>
-            <p>Comment on 3–5 local Newhall / Santa Clarita posts, follow local home accounts, reply to any incoming messages. This is the most impactful zero-cost thing you can do right now.</p>
+            <strong>Spend 15 minutes per day engaging outbound on Instagram + Facebook</strong>
+            <p>Comment on 3–5 local Newhall / Santa Clarita posts, follow local home accounts, and like content from neighboring businesses. No messages have been received yet on any platform — focus on going out to where your audience already is, rather than waiting for them to come to you.</p>
           </div>
         </li>
         <li>
@@ -620,22 +690,22 @@
         <li>
           <div class="action-num">3</div>
           <div class="action-body">
-            <strong>Confirm newsletter signup CTA is live on the website</strong>
-            <p>Check that constructionconcern.com has a visible "Get monthly home tips" or similar email signup. This is how the list grows.</p>
+            <strong>Promote the newsletter signup to grow the list past 1,000</strong>
+            <p>Newsletter signup is confirmed live on the website — great. The next goal is 1,000 subscribers. Share the signup link in your social bios and add a sign-up CTA to every email footer and blog post.</p>
           </div>
         </li>
         <li>
           <div class="action-num">4</div>
           <div class="action-body">
-            <strong>Export Wix email / newsletter stats for June review</strong>
-            <p>We need subscriber count, open rate, and click rate from at least the last 2 sends to assess newsletter health.</p>
+            <strong>Review and approve the June content plan by June 5</strong>
+            <p>June strategy includes carousels and hook-first posts — your approval by the first week keeps the calendar on schedule.</p>
           </div>
         </li>
         <li>
           <div class="action-num">5</div>
           <div class="action-body">
-            <strong>Review and approve the June content plan by June 5</strong>
-            <p>June strategy includes carousels and hook-first posts — your approval by the first week keeps the calendar on schedule.</p>
+            <strong>Export June analytics (Later, Wix, email) for the July review</strong>
+            <p>We need the same three data sources — Later.com social stats, Wix site traffic, and email campaign report — to complete the July performance assessment.</p>
           </div>
         </li>
       </ul>
