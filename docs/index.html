@@ -288,6 +288,66 @@
     footer strong { color: #ddd; }
     footer a { color: var(--accent); text-decoration: none; }
 
+    /* ── STATUS LEGEND ── */
+    .legend {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 18px;
+      margin-bottom: 24px;
+      font-size: 12px;
+    }
+    .legend-title { font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-right: 4px; }
+    .legend-item { display: flex; align-items: center; gap: 6px; color: var(--text); }
+
+    /* ── REFRESH BUTTON ── */
+    .refresh-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-lt);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      text-decoration: none;
+    }
+    .refresh-btn:hover { background: var(--accent); color: #fff; }
+
+    /* ── PLATFORM RANKING ── */
+    .rank-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+    }
+    .rank-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .rank-badge {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .rank-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .rank-why  { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+    .rank-action { font-size: 11px; font-weight: 600; color: var(--accent); margin-top: 8px; text-transform: uppercase; letter-spacing: .05em; }
+
     /* ── PRINT ── */
     @media print {
       .topbar { display: none; }
@@ -315,6 +375,7 @@
       <div class="month-badge">May 2026</div>
       <!-- UPDATE THIS DATE EACH WEEK -->
       <div class="updated">Last updated: May 25, 2026</div>
+      <a class="refresh-btn" href="javascript:window.location.reload()">↺ Refresh</a>
     </div>
   </div>
 </header>
@@ -329,6 +390,15 @@
       <strong>Month Status: Content Published · Engagement Strategy Beginning</strong>
       <p>All May content has been delivered on schedule. Analytics show reach is working on Facebook (190–260 per post) but engagement is near-zero — a content format issue, not a distribution issue. June strategy pivots to carousel posts and hook-first writing to drive interaction without video.</p>
     </div>
+  </div>
+
+  <!-- STATUS LEGEND -->
+  <div class="legend">
+    <span class="legend-title">Status Key:</span>
+    <span class="legend-item">🟢 On Track — performing well, no action needed</span>
+    <span class="legend-item">🟡 Monitor — working but could improve</span>
+    <span class="legend-item">🔴 Needs Work — declining or underperforming</span>
+    <span class="legend-item">🔵 New — less than 90 days old, building baseline data</span>
   </div>
 
   <!-- KPI CARDS — SOCIAL & WEB -->
@@ -508,6 +578,56 @@
     </div>
   </div>
 
+  <!-- PLATFORM RANKING -->
+  <div class="section">
+    <div class="section-title">Platform Priority — Where to Focus to Reach This Audience</div>
+    <div class="rank-grid">
+
+      <div class="rank-card">
+        <div class="rank-badge">#1</div>
+        <div class="rank-name">📧 Email Newsletter</div>
+        <div class="rank-why">42% open rate — highest engagement of any channel. These are warm contacts who already opted in. A great email drives website traffic, quote requests, and repeat business better than any social post.</div>
+        <div class="rank-action">Priority: Grow list · Send monthly</div>
+      </div>
+
+      <div class="rank-card">
+        <div class="rank-badge">#2</div>
+        <div class="rank-name">🔍 Website / Blog (SEO)</div>
+        <div class="rank-why">The fire safety blog got 168 views from search — people already looking for this information finding Construction Concern organically. One good blog post works 24/7 with no ad spend.</div>
+        <div class="rank-action">Priority: 2–4 posts/month on local topics</div>
+      </div>
+
+      <div class="rank-card">
+        <div class="rank-badge">#3</div>
+        <div class="rank-name">📘 Facebook</div>
+        <div class="rank-why">New page already reaching 190–260 people per post for free. The audience is here — 35–44 homeowners actively use Facebook. Problem is content format, not distribution. List posts and questions will unlock engagement.</div>
+        <div class="rank-action">Priority: Hook-first posts · Ask questions</div>
+      </div>
+
+      <div class="rank-card">
+        <div class="rank-badge">#4</div>
+        <div class="rank-name">📸 Instagram</div>
+        <div class="rank-why">Existing account with 366 followers. Carousels (swipe posts) are the Reels alternative — they get 3–5× more reach than single images without requiring video. Visual before/after content performs strongly here.</div>
+        <div class="rank-action">Priority: Carousels · Before/after photos</div>
+      </div>
+
+      <div class="rank-card">
+        <div class="rank-badge">#5</div>
+        <div class="rank-name">💼 LinkedIn</div>
+        <div class="rank-why">Best for reaching property managers, HOAs, real estate agents, and commercial referral sources — not homeowners directly. Strong long-term play for B2B leads and professional credibility.</div>
+        <div class="rank-action">Priority: Project proof posts · Credentials</div>
+      </div>
+
+      <div class="rank-card">
+        <div class="rank-badge">#6</div>
+        <div class="rank-name">🧵 Threads</div>
+        <div class="rank-why">Early-stage platform with low competition in local home improvement. Conversational, text-first format is easy to post without design work. Good for community building over time — low effort, low expectation.</div>
+        <div class="rank-action">Priority: Conversational tips · Low effort</div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- WEEKLY TRACKER -->
   <div class="section">
     <div class="section-title">Week-by-Week Performance — May 2026</div>
@@ -594,7 +714,7 @@
               <td>Low · Baseline</td>
               <td class="num">366</td>
               <td>Carousels + hooks</td>
-              <td><span class="pill pill-yellow">⚠ Needs Attention</span></td>
+              <td><span class="pill pill-yellow">🟡 Reach good · Content format needs updating</span></td>
             </tr>
             <tr>
               <td><strong>Facebook</strong></td>
@@ -603,7 +723,7 @@
               <td>Near-zero · Format issue</td>
               <td>New page</td>
               <td>Questions + list posts</td>
-              <td><span class="pill pill-yellow">⚠ Needs Attention</span></td>
+              <td><span class="pill pill-yellow">🟡 People see posts · Need stronger opening lines</span></td>
             </tr>
             <tr>
               <td><strong>LinkedIn</strong></td>
@@ -690,8 +810,8 @@
         <li>
           <div class="action-num">3</div>
           <div class="action-body">
-            <strong>Promote the newsletter signup to grow the list past 1,000</strong>
-            <p>Newsletter signup is confirmed live on the website — great. The next goal is 1,000 subscribers. Share the signup link in your social bios and add a sign-up CTA to every email footer and blog post.</p>
+            <strong>Ask Construction Concern to promote the newsletter signup through their own touchpoints</strong>
+            <p>Arc &amp; Anthem is promoting signup across all content channels. The next growth lever is Construction Concern adding it directly: mention it to customers after a job, include a link in estimate and invoice emails, and add it to any printed materials or business cards. The list grows fastest through direct customer relationships.</p>
           </div>
         </li>
         <li>
