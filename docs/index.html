@@ -10,22 +10,24 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:         #F7F4F0;
+      --bg:         #F4F7FA;
       --surface:    #FFFFFF;
-      --border:     #E8E2D9;
-      --text:       #1C1C1C;
-      --muted:      #6B6566;
-      --accent:     #C4622D;
-      --accent-lt:  #F5E8DF;
-      --blue:       #2B5B72;
-      --blue-lt:    #E0EDF2;
+      --border:     #D8E4ED;
+      --text:       #333333;
+      --muted:      #6B7A86;
+      --accent:     #2b5672;
+      --accent-lt:  #e0ecf4;
+      --blue:       #4B6EAF;
+      --blue-lt:    #eaf0f8;
       --green:      #2A7A50;
       --green-lt:   #DFF0E8;
       --yellow:     #9A6B00;
       --yellow-lt:  #FFF3CC;
       --red:        #B53B2A;
       --red-lt:     #FCEAE7;
-      --gray-lt:    #F0ECEB;
+      --warm:       #ea492e;
+      --warm-lt:    #fdecea;
+      --gray-lt:    #F0F3F5;
       --radius:     10px;
       --shadow:     0 1px 4px rgba(0,0,0,.07), 0 4px 16px rgba(0,0,0,.05);
     }
@@ -40,7 +42,7 @@
 
     /* ── TOP BAR ── */
     .topbar {
-      background: var(--text);
+      background: var(--accent);
       color: #fff;
       padding: 10px 32px;
       display: flex;
@@ -49,8 +51,8 @@
       font-size: 12px;
       letter-spacing: .03em;
     }
-    .topbar-brand { font-weight: 600; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; }
-    .topbar-meta { color: #aaa; }
+    .topbar-brand { font-weight: 600; color: #fff; letter-spacing: .06em; text-transform: uppercase; }
+    .topbar-meta { color: rgba(255,255,255,.65); }
 
     /* ── HEADER ── */
     header {
@@ -248,8 +250,8 @@
     .action-num {
       min-width: 26px;
       height: 26px;
-      background: var(--accent-lt);
-      color: var(--accent);
+      background: var(--warm-lt);
+      color: var(--warm);
       font-size: 12px;
       font-weight: 700;
       border-radius: 50%;
@@ -278,15 +280,15 @@
 
     /* ── FOOTER ── */
     footer {
-      background: var(--text);
-      color: #777;
+      background: var(--accent);
+      color: rgba(255,255,255,.6);
       text-align: center;
       padding: 24px 32px;
       font-size: 12px;
       margin-top: 40px;
     }
-    footer strong { color: #ddd; }
-    footer a { color: var(--accent); text-decoration: none; }
+    footer strong { color: #fff; }
+    footer a { color: rgba(255,255,255,.85); text-decoration: none; }
 
     /* ── STATUS LEGEND ── */
     .legend {
