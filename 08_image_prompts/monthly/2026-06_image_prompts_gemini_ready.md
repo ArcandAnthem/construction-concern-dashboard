@@ -14,7 +14,7 @@ All exterior prompts should reflect the **actual homes in Santa Clarita, Newhall
 ### Post #1
 **Post Topic:** LADWP energy costs / summer bills
 **Use On:** Facebook · Instagram · Threads
-**Image Prompt:** A split-view image. Left side: a typical Southern California suburban home — stucco exterior, tile roof, traditional windows, drought-tolerant front yard landscaping, warm afternoon sunlight. Right side: a hand holding a smartphone showing a utility bill app with a bar chart of electricity usage and a summer total amount due of $298.00 or higher visible. Photorealistic, square format 1:1 aspect ratio, natural lighting, No text overlay or headline on the image itself. Add a clean warm sand (#D4C5A9) horizontal bar along the bottom edge of the image. Place "Construction Concern" in small dark brown or charcoal lettering centered in that bar. No other text or watermarks.
+**Image Prompt:** A split-view image. Left side: a typical Southern California suburban home — stucco exterior, tile roof, traditional windows, drought-tolerant front yard landscaping, warm afternoon sunlight. Right side: a hand holding a smartphone showing a utility bill app with a bar chart of electricity usage peaking in July and August, a billing period showing "April 21 – May 20, 2026", and a total amount due of $298.00 visible. Photorealistic, square format 1:1 aspect ratio, natural lighting, No text overlay or headline on the image itself. Add a clean warm sand (#D4C5A9) horizontal bar along the bottom edge of the image. Place "Construction Concern" in small dark brown or charcoal lettering centered in that bar. No other text or watermarks.
 
 ---
 
