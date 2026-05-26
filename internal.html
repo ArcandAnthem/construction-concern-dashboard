@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Construction Concern — Internal Dashboard</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#F7F4F0; --surface:#FFFFFF; --border:#E8E2D9; --text:#1C1C1C; --muted:#6B6566;
+      --accent:#C4622D; --accent-lt:#F5E8DF; --blue:#2B5B72; --blue-lt:#E0EDF2;
+      --green:#2A7A50; --green-lt:#DFF0E8; --yellow:#9A6B00; --yellow-lt:#FFF3CC;
+      --red:#B53B2A; --red-lt:#FCEAE7; --gray-lt:#F0ECEB;
+      --radius:10px; --shadow:0 1px 4px rgba(0,0,0,.07), 0 4px 16px rgba(0,0,0,.05);
+    }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; }
+    .topbar { background: #111; color: #fff; padding: 10px 32px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; }
+    .topbar-brand { font-weight: 700; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; }
+    .internal-badge { background: var(--red); color: #fff; font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 10px; letter-spacing: .08em; text-transform: uppercase; }
+    header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 28px 32px 24px; }
+    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    header h1 { font-size: 22px; font-weight: 700; }
+    header h1 span { color: var(--accent); }
+    .month-badge { display: inline-block; background: var(--accent); color: #fff; font-weight: 600; font-size: 13px; padding: 4px 14px; border-radius: 20px; }
+    .updated { font-size: 11px; color: var(--muted); margin-top: 6px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 28px 32px; }
+    .section { margin-bottom: 32px; }
+    .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .kpi-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 8px; }
+    .kpi-value { font-size: 28px; font-weight: 700; line-height: 1; }
+    .kpi-trend { font-size: 12px; margin-top: 6px; }
+    .trend-up { color: var(--green); } .trend-down { color: var(--red); } .trend-flat { color: var(--yellow); } .trend-new { color: var(--blue); }
+    .kpi-note { font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .pill { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+    .pill-green { background: var(--green-lt); color: var(--green); }
+    .pill-yellow { background: var(--yellow-lt); color: var(--yellow); }
+    .pill-red { background: var(--red-lt); color: var(--red); }
+    .pill-blue { background: var(--blue-lt); color: var(--blue); }
+    .pill-gray { background: var(--gray-lt); color: var(--muted); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th { text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); background: var(--bg); padding: 10px 14px; border-bottom: 2px solid var(--border); }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--bg); }
+    td { padding: 11px 14px; vertical-align: middle; }
+    td.num { font-variant-numeric: tabular-nums; font-weight: 500; }
+    .table-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
+    .card h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+    .item-list { list-style: none; }
+    .item-list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; display: flex; align-items: flex-start; gap: 8px; }
+    .item-list li:last-child { border-bottom: none; }
+    .pri-high { color: var(--red); font-weight: 700; font-size: 10px; text-transform: uppercase; padding: 2px 6px; background: var(--red-lt); border-radius: 6px; flex-shrink: 0; }
+    .pri-med  { color: var(--yellow); font-weight: 700; font-size: 10px; text-transform: uppercase; padding: 2px 6px; background: var(--yellow-lt); border-radius: 6px; flex-shrink: 0; }
+    .pri-low  { color: var(--blue); font-weight: 700; font-size: 10px; text-transform: uppercase; padding: 2px 6px; background: var(--blue-lt); border-radius: 6px; flex-shrink: 0; }
+    .insight-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .insight-chip { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 12px 16px; flex: 1; min-width: 220px; }
+    .insight-chip .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); margin-bottom: 4px; }
+    .insight-chip p { font-size: 13px; }
+    footer { background: #111; color: #777; text-align: center; padding: 20px 32px; font-size: 12px; margin-top: 40px; }
+    footer strong { color: #ddd; }
+    .nav-link { display: inline-block; margin-bottom: 24px; color: var(--accent); font-size: 13px; text-decoration: none; font-weight: 500; }
+    .nav-link::before { content: "← "; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">Arc &amp; Anthem</span>
+  <span class="internal-badge">Internal Only</span>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div>
+      <h1>Construction Concern — <span>Internal Dashboard</span></h1>
+      <p style="color:var(--muted);font-size:13px;margin-top:4px;">Operational analytics · Strategy · Recommendations · Not for client distribution</p>
+    </div>
+    <div style="text-align:right">
+      <div class="month-badge">May 2026</div>
+      <div class="updated">Last updated: May 25, 2026</div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <a href="index.html" class="nav-link">Back to client dashboard</a>
+
+  <!-- DIAGNOSIS -->
+  <div class="section">
+    <div class="section-title">Root Cause Analysis</div>
+    <div class="insight-row">
+      <div class="insight-chip">
+        <div class="label">Problem #1 — Hook Failure</div>
+        <p>Facebook reaches 200 people per post but gets zero reactions. Content is being distributed but not stopping the scroll. The post format (lifestyle image + brochure caption) is not compelling enough for mid-feed behavior.</p>
+      </div>
+      <div class="insight-chip">
+        <div class="label">Problem #2 — No Audience Building</div>
+        <p>The system has been a publishing system only. No community engagement (commenting, following, participating), which means the algorithm receives no engagement signals to reward with wider distribution.</p>
+      </div>
+      <div class="insight-chip">
+        <div class="label">Problem #3 — Format Mismatch</div>
+        <p>Single static images are the lowest-performing format on both platforms. Carousels get 3× more algorithmic distribution on Instagram. No carousel posts have been published yet.</p>
+      </div>
+      <div class="insight-chip">
+        <div class="label">What's Actually Working</div>
+        <p>List-format posts (confirmed by data), fire safety SEO content (168 views — #1 by far), and Facebook organic distribution (200 reach/post is strong for a new page). The foundation is there.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI METRICS -->
+  <div class="section">
+    <div class="section-title">Full Metrics — May 2026</div>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">IG Followers</div>
+        <div class="kpi-value">366</div>
+        <div class="kpi-trend trend-down">↓ Net –9 (3-month period)</div>
+        <div class="kpi-note">Started ~375 in Feb · Peaked at 376</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">IG Best Post Views</div>
+        <div class="kpi-value">60</div>
+        <div class="kpi-trend trend-up">↑ "3 signs your windows…"</div>
+        <div class="kpi-note">Most posts: 8–20 views · List format wins</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">FB Posts Published</div>
+        <div class="kpi-value">13</div>
+        <div class="kpi-trend trend-flat">Apr–May 2026</div>
+        <div class="kpi-note">All photos · Reach: 190–260/post</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">FB Total Engagements</div>
+        <div class="kpi-value">2</div>
+        <div class="kpi-trend trend-down">↓ Across all 13 posts</div>
+        <div class="kpi-note">Apr 21 + Apr 30 only · Hook problem</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Blog — Top Post Views</div>
+        <div class="kpi-value">168</div>
+        <div class="kpi-trend trend-up">↑ Fire safety / soffits post</div>
+        <div class="kpi-note">Jan–May · /post/boxed-in-eaves-fire-safety</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Website Homepage Views</div>
+        <div class="kpi-value">482</div>
+        <div class="kpi-trend trend-new">Baseline period Jan–May</div>
+        <div class="kpi-note">Contact: 197 · About: 143 · Estimate: 61</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POST PERFORMANCE TABLE -->
+  <div class="section">
+    <div class="section-title">Facebook Post Performance — April–May 2026 (Later.com Data)</div>
+    <div class="table-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Post Date</th>
+              <th>Reach</th>
+              <th>Engagements</th>
+              <th>Clicks</th>
+              <th>Hook Assessment</th>
+              <th>Signal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Apr 9</td><td class="num">252</td><td class="num">0</td><td class="num">0</td><td>LADWP energy bills — timely topic, weak hook</td><td><span class="pill pill-yellow">High reach, no action</span></td></tr>
+            <tr><td>Apr 10</td><td class="num">258</td><td class="num">0</td><td class="num">0</td><td>—</td><td><span class="pill pill-yellow">High reach, no action</span></td></tr>
+            <tr><td>Apr 21</td><td class="num">191</td><td class="num">1</td><td class="num">1</td><td>First engagement signal</td><td><span class="pill pill-green">First signal</span></td></tr>
+            <tr><td>Apr 30</td><td class="num">~200</td><td class="num">1</td><td class="num">1</td><td>Second engagement signal</td><td><span class="pill pill-green">Second signal</span></td></tr>
+            <tr><td>All others (9 posts)</td><td class="num">~200</td><td class="num">0</td><td class="num">0</td><td>Lifestyle/brand captions — scroll-through</td><td><span class="pill pill-red">No engagement</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:10px;">Note: Facebook IS distributing to ~200 people per post for a brand new page. This is not a distribution problem. It is exclusively a content format and hook problem.</p>
+  </div>
+
+  <!-- RECOMMENDATIONS TABLE -->
+  <div class="section">
+    <div class="section-title">Recommendations — Priority Order for June</div>
+    <div class="table-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Priority</th><th>Action</th><th>Platform</th><th>Expected Impact</th><th>Effort</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="pill pill-red">High</span></td>
+              <td>Rewrite all post hooks using list or problem format</td>
+              <td>Facebook + Instagram</td>
+              <td>First engagements on Facebook, improved IG views</td>
+              <td>Low — prompt already built</td>
+            </tr>
+            <tr>
+              <td><span class="pill pill-red">High</span></td>
+              <td>Launch carousel format (4–6 slides) for top posts</td>
+              <td>Instagram primary, Facebook secondary</td>
+              <td>2–3× algorithmic reach vs. single image</td>
+              <td>Medium — Canva required</td>
+            </tr>
+            <tr>
+              <td><span class="pill pill-red">High</span></td>
+              <td>15 min/day community engagement (comments, follows)</td>
+              <td>Instagram + Facebook</td>
+              <td>Engagement signals → algorithm rewards → more reach</td>
+              <td>Low — no tools required</td>
+            </tr>
+            <tr>
+              <td><span class="pill pill-yellow">Medium</span></td>
+              <td>Expand fire safety content (confirmed SEO + social winner)</td>
+              <td>Blog + Instagram + Facebook</td>
+              <td>Replicate 168-view blog performance with related posts</td>
+              <td>Low — topic is ready</td>
+            </tr>
+            <tr>
+              <td><span class="pill pill-yellow">Medium</span></td>
+              <td>Request real project photos from client</td>
+              <td>All platforms</td>
+              <td>Authentic images outperform AI 2:1 in home improvement</td>
+              <td>Low — client action required</td>
+            </tr>
+            <tr>
+              <td><span class="pill pill-yellow">Medium</span></td>
+              <td>Get newsletter subscriber count and open rate from Wix</td>
+              <td>Newsletter</td>
+              <td>Enables newsletter health diagnosis and growth plan</td>
+              <td>Low — data pull from Wix</td>
+            </tr>
+            <tr>
+              <td><span class="pill pill-blue">Watch</span></td>
+              <td>Consider $50–100/month Facebook boost on top post</td>
+              <td>Facebook</td>
+              <td>Break new-page algorithm ceiling, generate first followers</td>
+              <td>Low cost — client budget decision</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPETITOR SIGNALS -->
+  <div class="section">
+    <div class="section-title">Competitor &amp; Market Signals</div>
+    <div class="two-col">
+      <div class="card">
+        <h3>Competitor Observations</h3>
+        <ul class="item-list">
+          <li><span class="pri-high">Watch</span> American Vision Windows: High review volume and omnichannel presence — wins on visibility. Opportunity: local depth and honest process content.</li>
+          <li><span class="pri-med">Note</span> Window World: Franchise with warranties and financing messaging. Counter with family-owned trust and bundled services.</li>
+          <li><span class="pri-low">Info</span> American Deluxe: Family-owned with communication praise but lower scope. Differentiate via HVAC + solar + remodel bundling.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Strategic Watchouts</h3>
+        <ul class="item-list">
+          <li><span class="pri-high">Risk</span> Continuing single-image posts without carousel shift will keep engagement near zero through summer.</li>
+          <li><span class="pri-high">Risk</span> No engagement activity means Instagram algorithm will continue deprioritizing posts, widening the organic gap.</li>
+          <li><span class="pri-med">Watch</span> Review volume gap vs. competitors — should be building Google review strategy alongside social.</li>
+          <li><span class="pri-low">Note</span> LinkedIn and Threads are new with no baseline — avoid over-investing until Instagram + Facebook are working.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROMPT SYSTEM STATUS -->
+  <div class="section">
+    <div class="section-title">Prompt System Status</div>
+    <div class="table-card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Prompt File</th><th>Purpose</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>01_monthly_research_prompt.md</td><td>Monthly trend and research brief</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td>02_monthly_strategy_prompt.md</td><td>Monthly strategy summary</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td>03_social_prompt.md</td><td>Social posts — updated May 2026 with hook rules</td><td><span class="pill pill-green">Updated</span></td></tr>
+            <tr><td>04_newsletter_prompt.md</td><td>Newsletter drafts</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td>05_blog_prompt.md</td><td>Blog post generation</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td>06_revision_prompt.md</td><td>Content revision and QA</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td>07_image_prompt_prompt.md</td><td>Image direction for posts</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td>08_analytics_review_prompt.md</td><td>Monthly performance review — NEW</td><td><span class="pill pill-blue">New · Ready for June</span></td></tr>
+            <tr><td>09_hook_writing_prompt.md</td><td>Scroll-stopping first lines — NEW</td><td><span class="pill pill-blue">New · Ready for June</span></td></tr>
+            <tr><td>10_carousel_content_prompt.md</td><td>Multi-slide carousel posts — NEW</td><td><span class="pill pill-blue">New · Ready for June</span></td></tr>
+            <tr><td>11_audience_growth_prompt.md</td><td>Community engagement plan — NEW</td><td><span class="pill pill-blue">New · Ready for June</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:10px;">Note: Prompts 08–11 are templates ready for first use in the June workflow. They have not been run yet.</p>
+  </div>
+
+</div>
+
+<footer>
+  <strong>Arc &amp; Anthem</strong> · Internal Use Only · Construction Concern Content Operations · May 2026
+</footer>
+
+</body>
+</html>
