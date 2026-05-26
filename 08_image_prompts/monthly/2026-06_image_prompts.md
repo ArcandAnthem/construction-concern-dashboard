@@ -33,7 +33,8 @@
 ### Post #5
 **Platform:** Instagram (Carousel)
 **Theme:** Fire season exterior checklist
-**Image Prompt:** Split view of a Southern California residential exterior — left side shows unprotected open eaves and older wood siding, right side shows modern enclosed soffits and fiber cement siding. Warm afternoon light. Realistic residential neighborhood context, no watermark, no text.
+**USE REAL PHOTO:** `BEFORE SHARP-NIMESGREN PICTURES OF SIDING.jpg` (Slide 1 — Before) + `NIMISGREN-SIDING AFTER PICTURE 1` folder (Slide 6 — After CTA slide)
+**Image Prompt (for remaining slides):** Close-up of modern fiber cement siding on a well-maintained Southern California home exterior. Warm afternoon daylight, realistic neighborhood context, no watermark, no text.
 
 ---
 
@@ -54,7 +55,8 @@
 ### Post #8
 **Platform:** Instagram (Carousel)
 **Theme:** 5 questions to ask a contractor
-**Image Prompt:** Clean modern home interior consultation scene. A homeowner and a contractor reviewing printed plans together at a kitchen table. Professional but warm — not overly formal. Southern California home aesthetic, natural light, realistic, no watermark.
+**USE REAL PHOTO:** `Berryman's kitchen After 1.jpg` or `After AHLHEIM Kitchen 1.JPG` for the final CTA slide — shows real completed work
+**Image Prompt (for question slides 1–5):** Clean modern home interior scene, Southern California home aesthetic, warm natural light, realistic, no watermark.
 
 ---
 
@@ -75,7 +77,8 @@
 ### Post #11
 **Platform:** Facebook
 **Theme:** Local knowledge / 35 year legacy
-**Image Prompt:** Warm exterior shot of a well-maintained single-family home in a Southern California residential neighborhood. Mature trees, clean yard, afternoon golden light. Neighborhood feel — lived in, cared for. No watermark, no text overlay.
+**USE REAL PHOTO:** `NIMISGREN-SIDING AFTER PICTURE 1` — exterior siding job, shows real completed work in a local neighborhood. Use the cleanest "after" shot from that folder.
+**Image Prompt (backup if photo unavailable):** Warm exterior shot of a well-maintained Southern California home, afternoon golden light, neighborhood feel, no watermark, no text overlay.
 
 ---
 
@@ -96,4 +99,5 @@
 ### Post #14
 **Platform:** Facebook
 **Theme:** Month-end / booking summer projects
-**Image Prompt:** A homeowner standing in front of their freshly upgraded Southern California home — clean new siding, new windows visible. Sunlight hitting the front of the house at a warm angle. Curb appeal scene, before/after feel. Warm, realistic, no watermark, no text overlay.
+**USE REAL PHOTO:** `AFTER PATIO 1.jpg` or `AFTER PATIO 2.jpg` — strong finished-project exterior shot. Alternatively, any clean "After" exterior from the siding or deck projects.
+**Image Prompt (backup if photo unavailable):** A freshly upgraded Southern California home exterior, warm afternoon sunlight, curb appeal scene. Photorealistic, no watermark, no text overlay.
