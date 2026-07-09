@@ -152,5 +152,9 @@ Newsletter and blog content should use the same monthly research foundation as s
 ## Image Prompt Rule
 If images are not generated directly in workflow, create one image prompt per planned post as a separate deliverable.
 
+## Brand Colors
+- **Warm Sand:** #D4C5A9 — primary brand bar color used on all social image overlays; "Construction Concern" branding text appears in dark charcoal on this bar
+- Do not use CC Logo Blue as a dominant design background or content panel
+
 ## Visual and Voice Rules
 Use warm, family-owned visual and verbal cues. Follow the brand guidelines for approved colors, typography, and CTA handling. Do not use CC Logo Blue as a dominant design background or content panel.

@@ -419,7 +419,35 @@ Add to Copilot context:
 
 ---
 
-## 15) Final monthly QA check
+## 15) Build the client update email
+
+After the analytics review is complete and all content for the month is finalized, generate the client-facing HTML email.
+
+Open:
+- `02_prompts/12_client_update_prompt.md`
+
+Add to Copilot context:
+- `01_config/client_profile.md`
+- The completed analytics review from Step 0
+- Any notable wins, milestones, or concerns from this month's content run
+- The client's first name
+- Whether this follows a recent call or meeting
+
+### Checklist
+- [ ] Run the client update prompt
+- [ ] Confirm the email leads with wins (newsletter, content quality, website engagement)
+- [ ] Confirm social growth is addressed honestly but framed as "still building"
+- [ ] Confirm the three client asks are present (photos, follows, reviews)
+- [ ] Confirm the at-a-glance summary table is included
+- [ ] Confirm the signature is: Karen M. Blackwell | CEO, Arc & Anthem | karen@arcandanthem.com
+- [ ] Save the HTML file to `09_exports/[YYYY-MM]_client_email_[client-last-name].html`
+- [ ] Save the markdown summary to `09_exports/[YYYY-MM]_client_progress_report.md`
+- [ ] Open the HTML file in a browser, select all, copy, paste into Outlook
+- [ ] Review before sending
+
+---
+
+## 16) Final monthly QA check
 
 Before you send or use anything, confirm:
 
@@ -443,6 +471,11 @@ Before you send or use anything, confirm:
 ### Images
 - [ ] Full image prompt file is completed
 - [ ] Gemini-ready image prompt file is completed
+
+### Client email
+- [ ] HTML client email is generated and saved to `09_exports/`
+- [ ] Markdown summary saved to `09_exports/`
+- [ ] Email reviewed and ready to send in Outlook
 
 ### General quality check
 - [ ] No leftover placeholder text
@@ -485,7 +518,8 @@ or
 11. Blog final
 12. Image prompt file
 13. Gemini-ready image prompt file
-14. QA review
+14. **Client update email (HTML — prompt 12)**
+15. QA review
 
 ---
 

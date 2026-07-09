@@ -2,10 +2,55 @@
 
 ---
 
+## Recommended Posting Schedule
+
+| Content | Day | Time | Notes |
+|---|---|---|---|
+| Newsletter #1 | **Tuesday** | **10:00am PST** | Highest open rates for B2C email |
+| Newsletter #2 | **Tuesday** | **10:00am PST** | Same day, 2 weeks apart |
+
+**Why Tuesday at 10am:** Research across home services email consistently shows Tuesday as the top day for opens. 10am catches subscribers after their morning routine and before the midday drop-off. Avoid Mondays (inbox overload) and Fridays (weekend distraction).
+
+---
+
 ## Newsletter #1
 
 **Subject Line:** 5 things to check before your LADWP bill peaks
 **Preview Text:** A quick June checklist for Santa Clarita and LA County homeowners.
+
+---
+
+### Images for This Newsletter
+
+**Hero Image (Block 2 — top of newsletter)**
+- **File to generate:** `newsletter_1_hero.png`
+- **Dimensions: 600px wide × 400px tall (landscape, 3:2 ratio)**
+- **Prompt:**
+```
+Create a photorealistic lifestyle image for a home improvement email newsletter.
+Output size: 600 pixels wide by 400 pixels tall, landscape orientation, 3:2 ratio.
+The scene shows the interior of a bright Southern California living room —
+stucco walls, warm neutral tones, natural light coming through large energy-efficient windows on a sunny June afternoon.
+The mood is calm, helpful, and confident. No people. No text on the image.
+Color palette: warm whites, sand, soft greens, and natural wood.
+Style: professional, editorial, real-estate quality.
+Do not include logos, words, overlays, or watermarks.
+```
+
+**Mid-Newsletter Image (Block 7B — just above Quick Tip)**
+- **File to generate:** `newsletter_1_mid.png`
+- **Dimensions: 600px wide × 300px tall (landscape, 2:1 ratio)**
+- **Prompt:**
+```
+Create a photorealistic close-up lifestyle image for a home improvement email newsletter.
+Output size: 600 pixels wide by 300 pixels tall, landscape orientation, 2:1 ratio.
+The scene shows a close-up of a residential HVAC air filter being replaced, or an HVAC vent grille on a wall,
+in a typical Southern California home — warm interior light, clean everyday surfaces.
+No people. No text. The mood is practical and helpful.
+Color palette: warm neutrals, natural interior light, soft shadows.
+Style: editorial, real-estate quality detail shot.
+Do not include logos, words, overlays, or watermarks.
+```
 
 ---
 
@@ -60,6 +105,40 @@ Request yours at constructionconcern.com/free-estimate
 
 **Subject Line:** 4 exterior upgrades before fire season peaks
 **Preview Text:** What your home's exterior should have this summer in SoCal.
+
+---
+
+### Images for This Newsletter
+
+**Hero Image (Block 2 — top of newsletter)**
+- **File to generate:** `newsletter_2_hero.png`
+- **Dimensions: 600px wide × 400px tall (landscape, 3:2 ratio)**
+- **Prompt:**
+```
+Create a photorealistic lifestyle image for a home improvement email newsletter.
+Output size: 600 pixels wide by 400 pixels tall, landscape orientation, 3:2 ratio.
+The scene shows the exterior of a well-maintained Southern California home — stucco finish,
+tile roof, drought-tolerant landscaping, clear blue summer sky. The home looks protected and well cared for.
+No people. No text on the image. The mood is calm, reassuring, and professional.
+Color palette: warm neutrals, desert greens, terracotta, clean sky blue.
+Style: professional, editorial, real-estate quality.
+Do not include logos, words, overlays, or watermarks.
+```
+
+**Mid-Newsletter Image (Block 7B — just above Quick Tip)**
+- **File to generate:** `newsletter_2_mid.png`
+- **Dimensions: 600px wide × 300px tall (landscape, 2:1 ratio)**
+- **Prompt:**
+```
+Create a photorealistic close-up lifestyle image for a home improvement email newsletter.
+Output size: 600 pixels wide by 300 pixels tall, landscape orientation, 2:1 ratio.
+The scene shows a close-up of enclosed stucco soffits or fiber cement siding on a
+typical Southern California suburban home — stucco walls, partial tile roof edge visible, clean daylight.
+No people. No text. The mood is practical and reassuring.
+Color palette: warm neutrals, stucco tones, clear sky in background.
+Style: editorial, real-estate quality detail shot.
+Do not include logos, words, overlays, or watermarks.
+```
 
 ---
 

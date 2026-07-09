@@ -1,5 +1,18 @@
 # Newsletter Final — Construction Concern — May 2026
 
+---
+
+## Recommended Posting Schedule
+
+| Content | Day | Time | Notes |
+|---|---|---|---|
+| Newsletter #1 | **Tuesday** | **10:00am PST** | Highest open rates for B2C email |
+| Newsletter #2 | **Tuesday** | **10:00am PST** | Same day, 2 weeks apart |
+
+**Why Tuesday at 10am:** Research across home services email consistently shows Tuesday as the top day for opens. 10am catches subscribers after their morning routine and before the midday drop-off. Avoid Mondays (inbox overload) and Fridays (weekend distraction).
+
+---
+
 ## Status
 Completed
 

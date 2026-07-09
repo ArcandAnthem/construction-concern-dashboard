@@ -1,5 +1,18 @@
 # Final Social Posting File — Construction Concern — June 2026
 
+## Recommended Posting Schedule
+
+| Platform | Best Days | Best Times (Pacific) | Notes |
+|---|---|---|---|
+| Facebook | Mon, Tue, Wed, Thu | 3:00–4:00pm | Hook-first format; question posts anchor Mon and Fri |
+| Instagram | Tue, Wed, Thu | 3:00–3:30pm | Carousels only this month; share all to Stories immediately after |
+| LinkedIn | Tue, Thu | 3:00pm | Professional tone; no emoji; links in caption are fine |
+| Threads | Thu, Sat | 3:30pm or 10:00am | Short and casual; no hashtags; no links required |
+
+**General rule:** Never post all platforms on the same day. Spread posts Mon–Thu with 1–2 weekend posts. No hashtags on Threads. No direct URLs in Instagram captions — always use "link in bio."
+
+---
+
 ### Post #1
 **Platform:** Facebook  
 **Caption with hashtags:**
@@ -26,7 +39,7 @@ Get yours at constructionconcern.com
 
 If more than 2 of these sound familiar, it's worth a conversation before July.
 
-Free estimates at constructionconcern.com
+Free estimates — link in bio.
 
 #SummerHome #SantaClarita #HomeComfort #WindowReplacement #HVAC #SoCal #ConstructionConcern #HomeImprovement
 
@@ -47,7 +60,7 @@ We work with both residential homeowners and multi-unit property owners. If you 
 Construction Concern | 35+ years serving LA and Ventura County
 constructionconcern.com
 
-#PropertyManagement #LosAngelesRealEstate #HomeImprovement #ConstructionConcern #VenturaCounty #SantaClarita #SummerMaintenance
+#PropertyManagement #LosAngelesRealEstate #ConstructionConcern #VenturaCounty #SummerMaintenance
 
 ---
 
@@ -71,7 +84,7 @@ Fire season starts in June in Santa Clarita. Here's what your home's exterior sh
 
 Swipe to see the 5 things that matter most. Save this for reference.
 
-Free estimate at constructionconcern.com
+Free estimate — link in bio.
 
 #FireSeason #SantaClaritaHomes #WildfirePrep #HomeExterior #Soffits #Siding #ConstructionConcern #LosAngelesHomeowners
 
@@ -83,8 +96,6 @@ Free estimate at constructionconcern.com
 The Santa Clarita Valley is officially in fire season. If your home has open soffits or wood siding, that's the first place to address.
 
 We've done exterior prep for homes in Newhall, Valencia, and Simi Valley. DM us if you have questions.
-
-#SantaClarita #FireSeason #HomeExterior #ConstructionConcern
 
 ---
 
@@ -114,6 +125,8 @@ Free estimate at constructionconcern.com
 Before you hire anyone for a summer home project — ask these 5 questions. Save this. 📌
 
 They're the ones that separate contractors who do it right from the ones who leave you with problems.
+
+Construction Concern has served LA and Ventura County for 35+ years — link in bio to get a free estimate.
 
 #HomeImprovement #ContractorTips #SantaClarita #LosAngelesHomes #ConstructionConcern #SummerProjects
 
@@ -150,7 +163,7 @@ We handle both HVAC and window replacement in the LA and Ventura County area. Wh
 
 Construction Concern | constructionconcern.com
 
-#HVAC #HomeEfficiency #LADWP #LosAngelesContractor #ConstructionConcern #SouthernCaliforniaHomes
+#HVAC #HomeEfficiency #LADWP #LosAngelesContractor #ConstructionConcern
 
 ---
 
@@ -195,8 +208,6 @@ Myth: You only need to worry about your windows when it's cold outside.
 Reality: In Southern California, your windows lose more energy in summer than winter. Heat gain through older glass is significant — and it's what makes your AC work harder all day.
 
 If your bill jumped this month, your windows might be why.
-
-#SoCal #LADWP #WindowReplacement #HomeEnergy #ConstructionConcern
 
 ---
 

@@ -1,7 +1,21 @@
 # Final Social Posting File — Construction Concern — May 2026
 
+## Recommended Posting Schedule
+
+| Platform | Best Days | Best Times (PST) | Notes |
+|---|---|---|---|
+| Instagram | Tue, Wed, Fri | 9:00am or 7:00pm | Morning reaches early scrollers; evening captures post-work |
+| Facebook | Wed, Thu | 1:00–3:00pm | Early afternoon has highest home services reach |
+| LinkedIn | Tue, Thu | 8:30–10:00am | Professional audience, business hours only |
+| Threads | Tue–Thu | 9:00–11:00am | New platform — consistency matters more than timing |
+
+**General rule:** Never post all platforms on the same day. Spread posts Tue–Thu for maximum individual reach. Post Instagram and Facebook within 1–2 hours of each other when sharing the same image.
+
+---
+
 ## Status
 Completed
+
 
 ## Final Posting — Construction Concern — May 2026
 

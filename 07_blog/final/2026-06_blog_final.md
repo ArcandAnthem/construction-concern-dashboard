@@ -2,6 +2,19 @@
 
 ---
 
+## Recommended Posting Schedule
+
+| Content | Day | Time | Notes |
+|---|---|---|---|
+| Blog Post #1 | **Tuesday** | **9:00am PST** | Publish first — supports Newsletter #1 |
+| Blog Post #2 | **Tuesday** | **9:00am PST** | Same week as Newsletter #2, 2 weeks later |
+| Blog Post #3 | **Wednesday** | **9:00am PST** | Mid-month for SEO consistency |
+| Blog Post #4 | **Wednesday** | **9:00am PST** | End of month |
+
+**Why Tuesday/Wednesday at 9am:** Weekday morning publishing captures Google indexing before peak search hours (10am–2pm). Tuesday is the top-performing day for home improvement content discovery. Wix auto-shares to social if connected — morning publish times maximize that reach.
+
+---
+
 ## Blog Post #1
 
 **Post Title:** How Summer Heat Affects Your Windows — and Your LADWP Bill
@@ -10,6 +23,37 @@
 **URL Slug:** energy-efficient-windows-santa-clarita-summer-cooling-costs
 **Target SEO Keyword:** energy efficient windows Santa Clarita
 **Cover Image Alt Text:** Energy efficient windows installed in a Southern California home, bright summer afternoon light.
+
+### Images for This Blog Post
+
+**Featured Cover Image (shows in blog list + social preview)**
+- **File to generate:** `blog_1_cover.png`
+- **Dimensions: 1200px wide × 628px tall (16:9 ratio — required for Wix blog thumbnail and social share)**
+- **Prompt:**
+```
+Create a photorealistic exterior photograph of a typical Southern California suburban home —
+stucco exterior, tile roof, traditional double-hung windows with clean frames, drought-tolerant
+landscaping, bright summer afternoon sunlight. Real neighborhood feel, not luxury or staged.
+Output size: 1200 pixels wide by 628 pixels tall, 16:9 landscape ratio.
+No people. No text, logos, watermarks, or overlays.
+Shot on DSLR camera at a real-world location. No CGI or 3D rendering.
+No warm color cast, no golden-hour filter. Neutral, true-to-life daylight exposure.
+Style: professional real-estate photography.
+```
+
+**In-Body Image (placed after "Signs your windows are affecting your bill" section)**
+- **File to generate:** `blog_1_body.png`
+- **Dimensions: 800px wide × 500px tall (8:5 ratio — standard Wix blog body image)**
+- **Prompt:**
+```
+Create a photorealistic close-up interior photograph of a standard double-hung window in a
+Southern California home — vinyl or painted wood frame, clear glass, warm afternoon sunlight
+streaming through, visible on the interior wall and floor. Real residential window, not architectural.
+Output size: 800 pixels wide by 500 pixels tall, 8:5 landscape ratio.
+No people. No text, logos, watermarks, or overlays.
+Shot on DSLR camera. No CGI. No warm color cast, neutral exposure.
+Style: editorial, real-estate quality detail shot.
+```
 
 ---
 
@@ -56,6 +100,38 @@ Schedule yours at constructionconcern.com/free-estimate
 **Target SEO Keyword:** fire season home prep Santa Clarita
 **Cover Image Alt Text:** Enclosed soffits and fiber cement siding on a well-maintained Santa Clarita home, clear summer sky.
 
+### Images for This Blog Post
+
+**Featured Cover Image (shows in blog list + social preview)**
+- **File to generate:** `blog_2_cover.png`
+- **Dimensions: 1200px wide × 628px tall (16:9 ratio)**
+- **Prompt:**
+```
+Create a photorealistic exterior photograph of a well-maintained Southern California suburban home —
+stucco exterior, tile roof, enclosed soffits under the eaves, drought-tolerant landscaping, clear
+blue summer sky. The home looks protected and cared for. Typical Santa Clarita or San Fernando Valley
+neighborhood.
+Output size: 1200 pixels wide by 628 pixels tall, 16:9 landscape ratio.
+No people. No text, logos, watermarks, or overlays.
+Shot on DSLR camera at a real-world location. No CGI or 3D rendering.
+No warm color cast, no golden-hour filter. Neutral, true-to-life daylight exposure.
+Style: professional real-estate photography.
+```
+
+**In-Body Image (placed after the "Vent screens and openings" section)**
+- **File to generate:** `blog_2_body.png`
+- **Dimensions: 800px wide × 500px tall (8:5 ratio)**
+- **Prompt:**
+```
+Create a photorealistic close-up exterior photograph of enclosed stucco or fiber cement soffits under
+the eave of a typical Southern California home — tile roof edge visible above, stucco siding visible
+below, clean residential construction, natural daylight.
+Output size: 800 pixels wide by 500 pixels tall, 8:5 landscape ratio.
+No people. No text, logos, watermarks, or overlays.
+Shot on DSLR camera. No CGI. No warm color cast, neutral exposure.
+Style: editorial, real-estate quality detail shot.
+```
+
 ---
 
 Fire season in Southern California doesn't wait for summer to fully arrive.
@@ -98,6 +174,37 @@ Schedule a free exterior walk-through at constructionconcern.com/free-estimate
 **URL Slug:** hvac-upgrade-los-angeles-southern-california-homeowners
 **Target SEO Keyword:** HVAC upgrade Los Angeles
 **Cover Image Alt Text:** HVAC unit on the side of a well-maintained Southern California home, afternoon sunlight.
+
+### Images for This Blog Post
+
+**Featured Cover Image (shows in blog list + social preview)**
+- **File to generate:** `blog_3_cover.png`
+- **Dimensions: 1200px wide × 628px tall (16:9 ratio)**
+- **Prompt:**
+```
+Create a photorealistic photograph of the side yard of a typical Southern California suburban home —
+stucco exterior wall, residential HVAC condenser unit on a concrete pad, tidy side yard, palm tree
+or drought-tolerant plants softly visible, clear afternoon sky. Real neighborhood context.
+Output size: 1200 pixels wide by 628 pixels tall, 16:9 landscape ratio.
+No people. No text, logos, watermarks, or overlays.
+Shot on DSLR camera at a real-world location. No CGI or 3D rendering.
+No warm color cast, no golden-hour filter. Neutral, true-to-life daylight exposure.
+Style: professional real-estate photography.
+```
+
+**In-Body Image (placed after the "The envelope problem" section)**
+- **File to generate:** `blog_3_body.png`
+- **Dimensions: 800px wide × 500px tall (8:5 ratio)**
+- **Prompt:**
+```
+Create a photorealistic close-up photograph of a residential HVAC air filter being held up to
+the light, or a white HVAC vent grille on an interior wall of a Southern California home —
+clean everyday interior surfaces, warm interior light.
+Output size: 800 pixels wide by 500 pixels tall, 8:5 landscape ratio.
+No people. No text, logos, watermarks, or overlays.
+Shot on DSLR camera. No CGI. Neutral exposure, no warm color cast.
+Style: editorial, practical detail shot.
+```
 
 ---
 
@@ -143,6 +250,38 @@ Schedule yours at constructionconcern.com/free-estimate
 **URL Slug:** window-siding-replacement-la-county-bundling-saves-money
 **Target SEO Keyword:** window and siding replacement LA County
 **Cover Image Alt Text:** Fresh fiber cement siding and new energy-efficient windows on a renovated Santa Clarita home.
+
+### Images for This Blog Post
+
+**Featured Cover Image (shows in blog list + social preview)**
+- **File to generate:** `blog_4_cover.png`
+- **Dimensions: 1200px wide × 628px tall (16:9 ratio)**
+- **Prompt:**
+```
+Create a photorealistic exterior photograph of a freshly renovated Southern California suburban home —
+new fiber cement or stucco siding, updated traditional double-hung windows with clean frames, tile roof,
+drought-tolerant landscaping, warm afternoon sunlight on the facade. Completed renovation, strong curb
+appeal. Typical Newhall or Santa Clarita neighborhood.
+Output size: 1200 pixels wide by 628 pixels tall, 16:9 landscape ratio.
+No people. No text, logos, watermarks, or overlays.
+Shot on DSLR camera at a real-world location. No CGI or 3D rendering.
+No warm color cast, no golden-hour filter. Neutral, true-to-life daylight exposure.
+Style: professional real-estate photography.
+```
+
+**In-Body Image (placed after the "The weatherproofing case" section)**
+- **File to generate:** `blog_4_body.png`
+- **Dimensions: 800px wide × 500px tall (8:5 ratio)**
+- **Prompt:**
+```
+Create a photorealistic close-up photograph showing where a new window frame meets new fiber cement
+siding on the exterior of a Southern California home — clean caulk line, fresh paint, proper flashing
+visible at the joint. Detail shot of a well-executed exterior installation.
+Output size: 800 pixels wide by 500 pixels tall, 8:5 landscape ratio.
+No people. No text, logos, watermarks, or overlays.
+Shot on DSLR camera. No CGI. Neutral exposure, no warm color cast.
+Style: editorial, contractor portfolio quality.
+```
 
 ---
 

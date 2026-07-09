@@ -53,6 +53,14 @@
     @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
     .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
     .card h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+    .highlight-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
+    .highlight-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+    .highlight-list { list-style: none; }
+    .highlight-list li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+    .highlight-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .hl-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .hl-text strong { display: block; font-weight: 500; }
+    .hl-text span { font-size: 12px; color: var(--muted); }
     .item-list { list-style: none; }
     .item-list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; display: flex; align-items: flex-start; gap: 8px; }
     .item-list li:last-child { border-bottom: none; }
@@ -63,6 +71,11 @@
     .insight-chip { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 12px 16px; flex: 1; min-width: 220px; }
     .insight-chip .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); margin-bottom: 4px; }
     .insight-chip p { font-size: 13px; }
+    .checklist { list-style: none; }
+    .checklist li { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+    .checklist li:last-child { border-bottom: none; }
+    .check-done { color: var(--green); font-size: 16px; }
+    .check-pend { color: var(--yellow); font-size: 16px; }
     footer { background: #111; color: #777; text-align: center; padding: 20px 32px; font-size: 12px; margin-top: 40px; }
     footer strong { color: #ddd; }
     .nav-link { display: inline-block; margin-bottom: 24px; color: var(--accent); font-size: 13px; text-decoration: none; font-weight: 500; }
@@ -83,8 +96,8 @@
       <p style="color:var(--muted);font-size:13px;margin-top:4px;">Operational analytics · Strategy · Recommendations · Not for client distribution</p>
     </div>
     <div style="text-align:right">
-      <div class="month-badge">May 2026</div>
-      <div class="updated">Last updated: May 25, 2026</div>
+      <div class="month-badge">July 2026</div>
+      <div class="updated">Last updated: July 8, 2026</div>
     </div>
   </div>
 </header>
@@ -92,159 +105,233 @@
 <div class="container">
   <a href="index.html" class="nav-link">Back to client dashboard</a>
 
-  <!-- DIAGNOSIS -->
   <div class="section">
-    <div class="section-title">Root Cause Analysis</div>
+    <div class="section-title">Executive Summary</div>
+    <div class="highlight-card">
+      <p>July strategy should not be built around the assumption that social is driving discovery or site action. The strongest current signals are direct traffic, Google organic search, and one clearly proven non-brand content lane: fire safety and boxed-eaves education. The best-performing owned web asset remains the boxed-eaves fire-safety post, while the Contact and About pages continue to outperform most service pages.</p>
+      <p style="margin-top:12px;">June also clarified what not to overstate. LinkedIn published 11 posts for 346 total impressions and zero measurable engagement. Instagram generated 243 total views, 73 total reach, and a net -1 follower change. Threads remained low volume. Email delivered but did not produce strong click behavior in the visible June export. The July posture should therefore be pragmatic: social supports recognition and saves, while website behavior and search demand determine the priority topics.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Operating Diagnosis</div>
     <div class="insight-row">
       <div class="insight-chip">
-        <div class="label">Problem #1 — Hook Failure</div>
-        <p>Facebook reaches 200 people per post but gets zero reactions. Content is being distributed but not stopping the scroll. The post format (lifestyle image + brochure caption) is not compelling enough for mid-feed behavior.</p>
+        <div class="label">Discovery Channel Mismatch</div>
+        <p>Social is not the main discovery engine. Direct traffic and Google organic search are doing materially more work than social referral.</p>
       </div>
       <div class="insight-chip">
-        <div class="label">Problem #2 — No Audience Building</div>
-        <p>The system has been a publishing system only. No community engagement (commenting, following, participating), which means the algorithm receives no engagement signals to reward with wider distribution.</p>
+        <div class="label">Proven Topic Lane</div>
+        <p>Boxed eaves, fire protection, soffits, and related exterior-protection education remain the clearest non-brand content winners.</p>
       </div>
       <div class="insight-chip">
-        <div class="label">Problem #3 — Format Mismatch</div>
-        <p>Single static images are the lowest-performing format on both platforms. Carousels get 3× more algorithmic distribution on Instagram. No carousel posts have been published yet.</p>
+        <div class="label">Trust-Page Behavior</div>
+        <p>Contact and About are outperforming most service pages, which suggests the audience is validating the company before committing to estimate action.</p>
       </div>
       <div class="insight-chip">
-        <div class="label">What's Actually Working</div>
-        <p>List-format posts (confirmed by data), fire safety SEO content (168 views — #1 by far), and Facebook organic distribution (200 reach/post is strong for a new page). The foundation is there.</p>
+        <div class="label">Platform Ceiling</div>
+        <p>LinkedIn engagement is effectively zero, Instagram is flat to down, Threads is low volume, and the missing June Facebook export still limits platform-specific claims.</p>
       </div>
     </div>
   </div>
 
-  <!-- KPI METRICS -->
   <div class="section">
-    <div class="section-title">Full Metrics — May 2026</div>
+    <div class="section-title">Full Metrics — June 2026</div>
     <div class="kpi-grid">
       <div class="kpi-card">
         <div class="kpi-label">IG Followers</div>
-        <div class="kpi-value">366</div>
-        <div class="kpi-trend trend-down">↓ Net –9 (3-month period)</div>
-        <div class="kpi-note">Started ~375 in Feb · Peaked at 376</div>
+        <div class="kpi-value">364</div>
+        <div class="kpi-trend trend-down">↓ Net -1 in June</div>
+        <div class="kpi-note">365 on June 1 → 364 on June 30</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">IG Best Post Views</div>
-        <div class="kpi-value">60</div>
-        <div class="kpi-trend trend-up">↑ "3 signs your windows…"</div>
-        <div class="kpi-note">Most posts: 8–20 views · List format wins</div>
+        <div class="kpi-label">IG Total Views</div>
+        <div class="kpi-value">243</div>
+        <div class="kpi-trend trend-flat">→ 73 total reach in June</div>
+        <div class="kpi-note">Peak view day: June 21 · 79 views</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">FB Posts Published</div>
-        <div class="kpi-value">13</div>
-        <div class="kpi-trend trend-flat">Apr–May 2026</div>
-        <div class="kpi-note">All photos · Reach: 190–260/post</div>
+        <div class="kpi-label">LinkedIn Avg. Impressions / Post</div>
+        <div class="kpi-value">31.5</div>
+        <div class="kpi-trend trend-down">↓ 11 posts · 346 total impressions</div>
+        <div class="kpi-note">0 clicks · 0 likes · 0 comments · 0 reposts</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">FB Total Engagements</div>
-        <div class="kpi-value">2</div>
-        <div class="kpi-trend trend-down">↓ Across all 13 posts</div>
-        <div class="kpi-note">Apr 21 + Apr 30 only · Hook problem</div>
+        <div class="kpi-label">Threads Views</div>
+        <div class="kpi-value">35</div>
+        <div class="kpi-trend trend-flat">→ 4 likes total</div>
+        <div class="kpi-note">Peak day: June 6 · 19 views</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">Blog — Top Post Views</div>
-        <div class="kpi-value">168</div>
-        <div class="kpi-trend trend-up">↑ Fire safety / soffits post</div>
-        <div class="kpi-note">Jan–May · /post/boxed-in-eaves-fire-safety</div>
+        <div class="kpi-label">Website Sessions</div>
+        <div class="kpi-value">178</div>
+        <div class="kpi-trend trend-flat">→ 231 page views · 165 unique visitors</div>
+        <div class="kpi-note">Average daily bounce rate: 76.9%</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">Website Homepage Views</div>
-        <div class="kpi-value">482</div>
-        <div class="kpi-trend trend-new">Baseline period Jan–May</div>
-        <div class="kpi-note">Contact: 197 · About: 143 · Estimate: 61</div>
+        <div class="kpi-label">Newsletter Clicks</div>
+        <div class="kpi-value">6</div>
+        <div class="kpi-trend trend-flat">→ 523 delivered · about 1.1% click rate</div>
+        <div class="kpi-note">Open rate was not visible in the June export</div>
       </div>
     </div>
   </div>
 
-  <!-- POST PERFORMANCE TABLE -->
   <div class="section">
-    <div class="section-title">Facebook Post Performance — April–May 2026 (Later.com Data)</div>
+    <div class="section-title">Platform Metrics — June 2026</div>
     <div class="table-card">
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>Post Date</th>
-              <th>Reach</th>
+              <th>Platform</th>
+              <th>Posts</th>
+              <th>Reach / Impressions</th>
               <th>Engagements</th>
-              <th>Clicks</th>
-              <th>Hook Assessment</th>
-              <th>Signal</th>
+              <th>Follower / Traffic Signal</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Apr 9</td><td class="num">252</td><td class="num">0</td><td class="num">0</td><td>LADWP energy bills — timely topic, weak hook</td><td><span class="pill pill-yellow">High reach, no action</span></td></tr>
-            <tr><td>Apr 10</td><td class="num">258</td><td class="num">0</td><td class="num">0</td><td>—</td><td><span class="pill pill-yellow">High reach, no action</span></td></tr>
-            <tr><td>Apr 21</td><td class="num">191</td><td class="num">1</td><td class="num">1</td><td>First engagement signal</td><td><span class="pill pill-green">First signal</span></td></tr>
-            <tr><td>Apr 30</td><td class="num">~200</td><td class="num">1</td><td class="num">1</td><td>Second engagement signal</td><td><span class="pill pill-green">Second signal</span></td></tr>
-            <tr><td>All others (9 posts)</td><td class="num">~200</td><td class="num">0</td><td class="num">0</td><td>Lifestyle/brand captions — scroll-through</td><td><span class="pill pill-red">No engagement</span></td></tr>
+            <tr>
+              <td><strong>Instagram</strong></td>
+              <td>Detailed June post export missing</td>
+              <td>73 total reach</td>
+              <td>Profile-level only · 1 repost visible</td>
+              <td>364 followers</td>
+              <td><span class="pill pill-yellow">Partial visibility only</span></td>
+            </tr>
+            <tr>
+              <td><strong>Facebook</strong></td>
+              <td>Detailed June post export missing</td>
+              <td>Unavailable</td>
+              <td>Unavailable</td>
+              <td>Follower export unusable</td>
+              <td><span class="pill pill-yellow">Blocked by missing export</span></td>
+            </tr>
+            <tr>
+              <td><strong>LinkedIn</strong></td>
+              <td class="num">11</td>
+              <td>346 total impressions</td>
+              <td>0 clicks · 0 likes · 0 comments · 0 reposts</td>
+              <td>Follower data missing</td>
+              <td><span class="pill pill-red">Effectively zero engagement</span></td>
+            </tr>
+            <tr>
+              <td><strong>Threads</strong></td>
+              <td>Detailed June post export missing</td>
+              <td>35 total views</td>
+              <td>4 likes · 0 replies · 0 reposts · 0 quotes</td>
+              <td>Follower data missing</td>
+              <td><span class="pill pill-yellow">Low-volume channel</span></td>
+            </tr>
+            <tr>
+              <td><strong>Website / Blog</strong></td>
+              <td>n/a</td>
+              <td>178 sessions · 231 page views</td>
+              <td>165 unique visitors</td>
+              <td>76.9% average daily bounce rate</td>
+              <td><span class="pill pill-green">Search + direct strongest</span></td>
+            </tr>
+            <tr>
+              <td><strong>Newsletter</strong></td>
+              <td class="num">1</td>
+              <td>523 delivered</td>
+              <td>6 unique clicks</td>
+              <td>Open rate not visible</td>
+              <td><span class="pill pill-yellow">Incomplete email visibility</span></td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
-    <p style="font-size:12px;color:var(--muted);margin-top:10px;">Note: Facebook IS distributing to ~200 people per post for a brand new page. This is not a distribution problem. It is exclusively a content format and hook problem.</p>
   </div>
 
-  <!-- RECOMMENDATIONS TABLE -->
+  <div class="section two-col">
+    <div class="highlight-card">
+      <h3>Top Performer</h3>
+      <ul class="highlight-list">
+        <li>
+          <span class="hl-icon">🔥</span>
+          <div class="hl-text">
+            <strong>Blog / Organic Search</strong>
+            <span>The boxed-eaves fire-safety post produced 163 views and 128 unique visitors and continues to anchor the strongest non-brand search lane.</span>
+          </div>
+        </li>
+        <li>
+          <span class="hl-icon">🔎</span>
+          <div class="hl-text">
+            <strong>Why It Worked</strong>
+            <span>It answers a clear local fire-season question and aligns directly to a service area Construction Concern can credibly own.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="highlight-card">
+      <h3>Lowest Performer</h3>
+      <ul class="highlight-list">
+        <li>
+          <span class="hl-icon">📉</span>
+          <div class="hl-text">
+            <strong>LinkedIn</strong>
+            <span>The June 4 fire-season exterior post produced 3 impressions and zero measurable engagement.</span>
+          </div>
+        </li>
+        <li>
+          <span class="hl-icon">🧱</span>
+          <div class="hl-text">
+            <strong>Why It Underperformed</strong>
+            <span>Generic seasonal framing is not surviving on LinkedIn. Myth-correction and whole-home planning logic are the only angles worth preserving there.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <div class="section">
-    <div class="section-title">Recommendations — Priority Order for June</div>
+    <div class="section-title">Recommendations — Priority Order for July</div>
     <div class="table-card">
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>Priority</th><th>Action</th><th>Platform</th><th>Expected Impact</th><th>Effort</th></tr>
+            <tr><th>Priority</th><th>Action</th><th>Channel</th><th>Expected Impact</th><th>Constraint</th></tr>
           </thead>
           <tbody>
             <tr>
               <td><span class="pill pill-red">High</span></td>
-              <td>Rewrite all post hooks using list or problem format</td>
-              <td>Facebook + Instagram</td>
-              <td>First engagements on Facebook, improved IG views</td>
-              <td>Low — prompt already built</td>
+              <td>Double down on boxed-eaves and fire-protection education</td>
+              <td>Blog + newsletter + social</td>
+              <td>Extends the strongest search-aligned topic lane</td>
+              <td>No material blocker</td>
             </tr>
             <tr>
               <td><span class="pill pill-red">High</span></td>
-              <td>Launch carousel format (4–6 slides) for top posts</td>
-              <td>Instagram primary, Facebook secondary</td>
-              <td>2–3× algorithmic reach vs. single image</td>
-              <td>Medium — Canva required</td>
+              <td>Keep LinkedIn active only for myth-correction and whole-home planning logic</td>
+              <td>LinkedIn</td>
+              <td>Protects effort on the lowest-yield platform</td>
+              <td>Platform remains weak overall</td>
             </tr>
             <tr>
               <td><span class="pill pill-red">High</span></td>
-              <td>15 min/day community engagement (comments, follows)</td>
-              <td>Instagram + Facebook</td>
-              <td>Engagement signals → algorithm rewards → more reach</td>
-              <td>Low — no tools required</td>
+              <td>Stop treating social as a primary click channel until referral data changes</td>
+              <td>Cross-channel</td>
+              <td>Sets realistic expectations for July reporting</td>
+              <td>Referral data still weak</td>
             </tr>
             <tr>
               <td><span class="pill pill-yellow">Medium</span></td>
-              <td>Expand fire safety content (confirmed SEO + social winner)</td>
-              <td>Blog + Instagram + Facebook</td>
-              <td>Replicate 168-view blog performance with related posts</td>
-              <td>Low — topic is ready</td>
+              <td>Strengthen bridges from Contact/About into Request Free Estimate and service pages</td>
+              <td>Website</td>
+              <td>Moves reassurance traffic closer to estimate intent</td>
+              <td>Requires site-copy review</td>
             </tr>
             <tr>
               <td><span class="pill pill-yellow">Medium</span></td>
-              <td>Request real project photos from client</td>
-              <td>All platforms</td>
-              <td>Authentic images outperform AI 2:1 in home improvement</td>
-              <td>Low — client action required</td>
-            </tr>
-            <tr>
-              <td><span class="pill pill-yellow">Medium</span></td>
-              <td>Get newsletter subscriber count and open rate from Wix</td>
-              <td>Newsletter</td>
-              <td>Enables newsletter health diagnosis and growth plan</td>
-              <td>Low — data pull from Wix</td>
-            </tr>
-            <tr>
-              <td><span class="pill pill-blue">Watch</span></td>
-              <td>Consider $50–100/month Facebook boost on top post</td>
-              <td>Facebook</td>
-              <td>Break new-page algorithm ceiling, generate first followers</td>
-              <td>Low cost — client budget decision</td>
+              <td>Require the missing June Facebook / Later export before making format claims</td>
+              <td>Facebook reporting</td>
+              <td>Prevents over-claiming platform learning</td>
+              <td>Missing source file</td>
             </tr>
           </tbody>
         </table>
@@ -252,60 +339,24 @@
     </div>
   </div>
 
-  <!-- COMPETITOR SIGNALS -->
   <div class="section">
-    <div class="section-title">Competitor &amp; Market Signals</div>
-    <div class="two-col">
-      <div class="card">
-        <h3>Competitor Observations</h3>
-        <ul class="item-list">
-          <li><span class="pri-high">Watch</span> American Vision Windows: High review volume and omnichannel presence — wins on visibility. Opportunity: local depth and honest process content.</li>
-          <li><span class="pri-med">Note</span> Window World: Franchise with warranties and financing messaging. Counter with family-owned trust and bundled services.</li>
-          <li><span class="pri-low">Info</span> American Deluxe: Family-owned with communication praise but lower scope. Differentiate via HVAC + solar + remodel bundling.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Strategic Watchouts</h3>
-        <ul class="item-list">
-          <li><span class="pri-high">Risk</span> Continuing single-image posts without carousel shift will keep engagement near zero through summer.</li>
-          <li><span class="pri-high">Risk</span> No engagement activity means Instagram algorithm will continue deprioritizing posts, widening the organic gap.</li>
-          <li><span class="pri-med">Watch</span> Review volume gap vs. competitors — should be building Google review strategy alongside social.</li>
-          <li><span class="pri-low">Note</span> LinkedIn and Threads are new with no baseline — avoid over-investing until Instagram + Facebook are working.</li>
-        </ul>
-      </div>
+    <div class="section-title">July Deliverables and Source Notes</div>
+    <div class="highlight-card">
+      <ul class="checklist">
+        <li><span class="check-done">✓</span> 12 social posts across Facebook, Instagram, LinkedIn, and Threads</li>
+        <li><span class="check-done">✓</span> 2 newsletters and 4 July blog posts aligned to the fire-safety and comfort-diagnostic themes</li>
+        <li><span class="check-done">✓</span> Social, newsletter, and blog image prompt sheets</li>
+        <li><span class="check-done">✓</span> Source files: 11_analytics/2026-06_analytics_review.md and 03_research/monthly_logs/2026-07_research_summary.md</li>
+        <li><span class="check-done">✓</span> Priority URLs: constructionconcern.com/contact, /about-us, /request-free-estimate, and /post/boxed-in-eaves-fire-safety</li>
+        <li><span class="check-pend">◐</span> Missing June Facebook / Later detailed export still needs to be added for fuller platform learning</li>
+      </ul>
     </div>
-  </div>
-
-  <!-- PROMPT SYSTEM STATUS -->
-  <div class="section">
-    <div class="section-title">Prompt System Status</div>
-    <div class="table-card">
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Prompt File</th><th>Purpose</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>01_monthly_research_prompt.md</td><td>Monthly trend and research brief</td><td><span class="pill pill-green">Active</span></td></tr>
-            <tr><td>02_monthly_strategy_prompt.md</td><td>Monthly strategy summary</td><td><span class="pill pill-green">Active</span></td></tr>
-            <tr><td>03_social_prompt.md</td><td>Social posts — updated May 2026 with hook rules</td><td><span class="pill pill-green">Updated</span></td></tr>
-            <tr><td>04_newsletter_prompt.md</td><td>Newsletter drafts</td><td><span class="pill pill-green">Active</span></td></tr>
-            <tr><td>05_blog_prompt.md</td><td>Blog post generation</td><td><span class="pill pill-green">Active</span></td></tr>
-            <tr><td>06_revision_prompt.md</td><td>Content revision and QA</td><td><span class="pill pill-green">Active</span></td></tr>
-            <tr><td>07_image_prompt_prompt.md</td><td>Image direction for posts</td><td><span class="pill pill-green">Active</span></td></tr>
-            <tr><td>08_analytics_review_prompt.md</td><td>Monthly performance review — NEW</td><td><span class="pill pill-blue">New · Ready for June</span></td></tr>
-            <tr><td>09_hook_writing_prompt.md</td><td>Scroll-stopping first lines — NEW</td><td><span class="pill pill-blue">New · Ready for June</span></td></tr>
-            <tr><td>10_carousel_content_prompt.md</td><td>Multi-slide carousel posts — NEW</td><td><span class="pill pill-blue">New · Ready for June</span></td></tr>
-            <tr><td>11_audience_growth_prompt.md</td><td>Community engagement plan — NEW</td><td><span class="pill pill-blue">New · Ready for June</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <p style="font-size:12px;color:var(--muted);margin-top:10px;">Note: Prompts 08–11 are templates ready for first use in the June workflow. They have not been run yet.</p>
   </div>
 
 </div>
 
 <footer>
-  <strong>Arc &amp; Anthem</strong> · Internal Use Only · Construction Concern Content Operations · May 2026
+  <strong>Arc &amp; Anthem</strong> · Internal Use Only · Construction Concern Content Operations · July 2026
 </footer>
 
 </body>

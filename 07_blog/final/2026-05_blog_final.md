@@ -1,5 +1,19 @@
 # Blog Final — Construction Concern — May 2026
 
+---
+
+## Recommended Posting Schedule
+
+| Content | Day | Time | Notes |
+|---|---|---|---|
+| Blog Post #1 | **Tuesday** | **9:00am PST** | Publish first — supports Newsletter #1 |
+| Blog Post #2 | **Tuesday** | **9:00am PST** | Same week as Newsletter #2, 2 weeks later |
+| Blog Post #3 | **Wednesday** | **9:00am PST** | Mid-month for SEO consistency |
+
+**Why Tuesday/Wednesday at 9am:** Weekday morning publishing captures Google indexing before peak search hours (10am–2pm). Tuesday is the top-performing day for home improvement content discovery.
+
+---
+
 ## Status
 Completed — Ready for Deployment
 
