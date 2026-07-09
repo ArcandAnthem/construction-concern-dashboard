@@ -52,506 +52,247 @@
     .topbar-meta { color: #aaa; }
 
     header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 28px 32px 24px;
-    }
-    .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    header h1 { font-size: 22px; font-weight: 700; color: var(--text); }
-    header h1 span { color: var(--accent); }
-    .header-meta { text-align: right; }
-    .month-badge {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 600;
-      font-size: 13px;
-      padding: 4px 14px;
-      border-radius: 20px;
-      letter-spacing: .04em;
-    }
-    .updated { font-size: 11px; color: var(--muted); margin-top: 6px; }
-
-    .container { max-width: 1100px; margin: 0 auto; padding: 28px 32px; }
-    .section { margin-bottom: 32px; }
-    .section-title {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: var(--muted);
-      margin-bottom: 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .banner {
-      background: var(--blue-lt);
-      border-left: 4px solid var(--blue);
-      border-radius: var(--radius);
-      padding: 16px 20px;
-      margin-bottom: 32px;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .banner-icon { font-size: 20px; line-height: 1; margin-top: 1px; }
-    .banner-text strong { display: block; font-size: 15px; font-weight: 600; color: var(--blue); margin-bottom: 3px; }
-    .banner-text p { color: #3a5a6b; font-size: 13px; }
-
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 16px;
-    }
-    .kpi-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: var(--shadow);
-    }
-    .kpi-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 8px; }
-    .kpi-value { font-size: 32px; font-weight: 700; color: var(--text); line-height: 1; }
-    .kpi-value sup { font-size: 14px; font-weight: 400; color: var(--muted); }
-    .kpi-trend { display: flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 12px; }
-    .trend-up   { color: var(--green); }
-    .trend-down { color: var(--red); }
-    .trend-flat { color: var(--yellow); }
-    .trend-new  { color: var(--blue); }
-    .kpi-note { font-size: 11px; color: var(--muted); margin-top: 6px; }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 3px 10px;
-      border-radius: 12px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .03em;
-    }
-    .pill-green  { background: var(--green-lt);  color: var(--green); }
-    .pill-yellow { background: var(--yellow-lt); color: var(--yellow); }
-    .pill-red    { background: var(--red-lt);    color: var(--red); }
-    .pill-blue   { background: var(--blue-lt);   color: var(--blue); }
-    .pill-gray   { background: var(--gray-lt);   color: var(--muted); }
-
-    .table-wrap { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; }
-    thead th {
-      text-align: left;
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .07em;
-      color: var(--muted);
-      background: var(--bg);
-      padding: 10px 14px;
-      border-bottom: 2px solid var(--border);
-    }
-    tbody tr { border-bottom: 1px solid var(--border); }
-    tbody tr:last-child { border-bottom: none; }
-    tbody tr:hover { background: var(--bg); }
-    td { padding: 12px 14px; vertical-align: middle; }
-    td.num { font-variant-numeric: tabular-nums; font-weight: 500; }
-    .table-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
-
-    .highlight-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px 20px;
-      box-shadow: var(--shadow);
-    }
-    .highlight-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
-    .highlight-list { list-style: none; }
-    .highlight-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
-    }
-    .highlight-list li:last-child { border-bottom: none; padding-bottom: 0; }
-    .hl-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
-    .hl-text strong { display: block; font-weight: 500; }
-    .hl-text span { font-size: 12px; color: var(--muted); }
-
-    .dot {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 5px;
-    }
-    .dot-green  { background: var(--green); }
-    .dot-yellow { background: var(--yellow); }
-    .dot-red    { background: var(--red); }
-    .dot-blue   { background: var(--blue); }
-    .dot-gray   { background: #bbb; }
-
-    .kpi-value.val-green { color: var(--green); }
-    .kpi-value.val-red   { color: var(--red); }
-    .kpi-value.val-blue  { color: var(--blue); }
-
-    .checklist { list-style: none; }
-    .checklist li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 9px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
-    }
-    .checklist li:last-child { border-bottom: none; }
-    .check-done   { color: var(--green); font-size: 16px; }
-    .check-pend   { color: var(--yellow); font-size: 16px; }
-    .check-todo   { color: #ccc; font-size: 16px; }
-
-    .action-list { list-style: none; counter-reset: action; }
-    .action-list li {
-      counter-increment: action;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
-    }
-    .action-list li:last-child { border-bottom: none; }
-    .action-num {
-      min-width: 26px;
-      height: 26px;
-      background: var(--accent-lt);
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 700;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .action-body strong { display: block; font-weight: 600; margin-bottom: 2px; }
-    .action-body p { color: var(--muted); font-size: 12px; }
-
-    .insight-row { display: flex; gap: 16px; flex-wrap: wrap; }
-    .insight-chip {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: var(--radius);
-      padding: 12px 16px;
-      flex: 1;
-      min-width: 220px;
-      box-shadow: var(--shadow);
-    }
-    .insight-chip .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); margin-bottom: 4px; }
-    .insight-chip p { font-size: 13px; color: var(--text); }
-
-    footer {
-      background: var(--text);
-      color: #777;
-      text-align: center;
-      padding: 24px 32px;
-      font-size: 12px;
-      margin-top: 40px;
-    }
-    footer strong { color: #ddd; }
-    footer a { color: var(--accent); text-decoration: none; }
-
-    @media print {
-      .topbar { display: none; }
-      body { background: #fff; }
-      .kpi-card, .highlight-card, .table-card, .insight-chip { box-shadow: none; border-color: #ddd; }
-    }
-  </style>
-</head>
-<body>
-
-<!-- TOP BAR -->
-<div class="topbar">
-  <span class="topbar-brand">Arc &amp; Anthem</span>
-  <span class="topbar-meta">Content Operations · Construction Concern · Confidential</span>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="header-inner">
-    <div>
-      <h1>Construction Concern — <span>Content Dashboard</span></h1>
-      <p style="color:var(--muted);font-size:13px;margin-top:4px;">Monthly content performance, strategy, and progress · Newhall, CA</p>
-    </div>
-    <div class="header-meta">
-      <div class="month-badge">July 2026</div>
-      <div class="updated">Last updated: July 8, 2026</div>
-    </div>
-  </div>
-</header>
-
-<div class="container">
-
-  <div class="banner">
-    <div class="banner-icon">📈</div>
-    <div class="banner-text">
-      <strong>Month Status: Search-Led Content Working · Social Needs Attention</strong>
-      <p>June analytics show that direct traffic and Google search are carrying discovery, while social is still doing more trust-building than click-driving. July content is intentionally narrower: fire-season exterior guidance, boxed eaves and soffits, hot-room diagnostics, and clearer bridges from reassurance into estimate intent.</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Performance at a Glance — July 2026</div>
-    <div class="kpi-grid">
-      <div class="kpi-card">
-        <div class="kpi-label">Website Sessions</div>
-        <div class="kpi-value">178</div>
-        <div class="kpi-trend trend-up">↑ Direct + search are leading discovery</div>
-        <div class="kpi-note">🟢 165 unique visitors · 231 page views in June</div>
+      <div class="banner">
+        <div class="banner-icon">+</div>
+        <div class="banner-text">
+          <strong>Month Status: Strong Owned-Content Signals · Social Being Repositioned</strong>
+          <p>The latest Wix and Later reports show that search, blog content, trust pages, and reliable email delivery are the strongest parts of the system right now. July should build harder on those channels while social shifts into a support role instead of carrying the growth target.</p>
+        </div>
       </div>
 
-      <div class="kpi-card">
-        <div class="kpi-label">Instagram Followers</div>
-        <div class="kpi-value val-red">364</div>
-        <div class="kpi-trend trend-down">↓ Net -1 in June</div>
-        <div class="kpi-note">🟡 243 total views · 73 total reach</div>
-      </div>
-
-      <div class="kpi-card">
-        <div class="kpi-label">LinkedIn Avg. Impressions / Post</div>
-        <div class="kpi-value val-blue">31.5</div>
-        <div class="kpi-trend trend-flat">→ 11 June posts · low-yield channel</div>
-        <div class="kpi-note">🔵 346 total impressions · 0 measurable engagement</div>
-      </div>
-
-      <div class="kpi-card">
-        <div class="kpi-label">Blog Top Post Views</div>
-        <div class="kpi-value val-green">163</div>
-        <div class="kpi-trend trend-up">↑ Boxed-eaves fire-safety post stays #1</div>
-        <div class="kpi-note">🟢 128 unique visitors · strongest owned content asset</div>
-      </div>
-
-      <div class="kpi-card">
-        <div class="kpi-label">Newsletter Click Rate</div>
-        <div class="kpi-value">1.1%</div>
-        <div class="kpi-trend trend-flat">→ 1 June send visible in export</div>
-        <div class="kpi-note">🟡 523 delivered · 6 unique clicks</div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Performance Snapshot — June 2026</div>
-    <div class="table-card">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Metric</th>
-              <th>This Month</th>
-              <th>Last Month</th>
-              <th>Change</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Instagram Followers</strong></td>
-              <td class="num">364</td>
-              <td class="num">365</td>
-              <td><span class="pill pill-red">-1</span></td>
-            </tr>
-            <tr>
-              <td><strong>Instagram Top Post Views</strong></td>
-              <td class="num">79</td>
-              <td class="num">82</td>
-              <td><span class="pill pill-yellow">-3</span></td>
-            </tr>
-            <tr>
-              <td><strong>Facebook Avg Reach / Post</strong></td>
-              <td>June detailed export missing</td>
-              <td>about 220 in May</td>
-              <td><span class="pill pill-yellow">Cannot compare</span></td>
-            </tr>
-            <tr>
-              <td><strong>Website Sessions</strong></td>
-              <td class="num">178</td>
-              <td>Prior May file set not directly comparable</td>
-              <td><span class="pill pill-green">Search + direct lead</span></td>
-            </tr>
-            <tr>
-              <td><strong>Blog Top Post Views</strong></td>
-              <td>163 on boxed-eaves fire-safety post</td>
-              <td>Same topic lane remained top in May</td>
-              <td><span class="pill pill-green">Still strongest</span></td>
-            </tr>
-            <tr>
-              <td><strong>Newsletter Open Rate</strong></td>
-              <td>Not visible in uploaded June export</td>
-              <td>42% in May</td>
-              <td><span class="pill pill-yellow">Incomplete</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">What the Monthly Research Shows</div>
-    <div class="insight-row">
-      <div class="insight-chip">
-        <div class="label">Proven Topic Lane</div>
-        <p>The clearest non-brand content winner is still fire safety and boxed-eaves education, led by the boxed-eaves blog post.</p>
-      </div>
-      <div class="insight-chip">
-        <div class="label">Discovery Pattern</div>
-        <p>Direct traffic and Google search are driving discovery more than social referral, so July strategy follows search demand first.</p>
-      </div>
-      <div class="insight-chip">
-        <div class="label">Trust-Page Behavior</div>
-        <p>Contact and About pages are attracting stronger traffic than many individual service pages, which means reassurance is a key step before estimate intent.</p>
-      </div>
-      <div class="insight-chip">
-        <div class="label">Content Role</div>
-        <p>Social should support recognition, trust, and saves. Blogs, newsletters, and high-intent site pages are carrying the deeper education work.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Our Strategy for the Month</div>
-    <div class="two-col">
-      <div class="highlight-card">
-        <h3>Priority Themes</h3>
-        <ul class="highlight-list">
-          <li>
-            <span class="hl-icon">🔥</span>
-            <div class="hl-text">
-              <strong>Fire-Season Exterior Weak Points</strong>
-              <span>Boxed eaves, soffits, siding condition, vents, and other exterior details that matter before August.</span>
-            </div>
-          </li>
-          <li>
-            <span class="hl-icon">☀️</span>
-            <div class="hl-text">
-              <strong>Mid-Summer Comfort Diagnostics</strong>
-              <span>Hot rooms, older windows, after-sunset heat retention, and uneven cooling.</span>
-            </div>
-          </li>
-          <li>
-            <span class="hl-icon">🏠</span>
-            <div class="hl-text">
-              <strong>Whole-Home Planning Logic</strong>
-              <span>When one small repair is not enough and when bundled upgrades make more sense.</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="highlight-card">
-        <h3>What Changes in July</h3>
-        <ul class="highlight-list">
-          <li>
-            <span class="hl-icon">🔎</span>
-            <div class="hl-text">
-              <strong>Less Generic Summer Messaging</strong>
-              <span>July shifts away from broad seasonal copy and toward the specific issues homeowners are already feeling or searching for.</span>
-            </div>
-          </li>
-          <li>
-            <span class="hl-icon">💬</span>
-            <div class="hl-text">
-              <strong>Social Supports Trust First</strong>
-              <span>We are not treating social as a primary click channel until referral behavior improves.</span>
-            </div>
-          </li>
-          <li>
-            <span class="hl-icon">🧭</span>
-            <div class="hl-text">
-              <strong>Clearer Path to Estimate Intent</strong>
-              <span>Content now does more work moving readers from reassurance into action-oriented pages.</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">What Content You Will See</div>
-    <div class="highlight-card">
-      <ul class="checklist">
-        <li><span class="check-done">✓</span> 12 social posts across Facebook, Instagram, LinkedIn, and Threads</li>
-        <li><span class="check-done">✓</span> 2 newsletters built around comfort diagnostics and fire-season exterior checks</li>
-        <li><span class="check-done">✓</span> 4 blog posts aligned to the strongest search and website signals</li>
-        <li><span class="check-done">✓</span> Social image prompts aligned to the July strategy</li>
-        <li><span class="check-done">✓</span> Standalone newsletter and blog image prompt sheets</li>
-        <li><span class="check-done">✓</span> Internal and client dashboards for July planning and reporting</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Recommended Next Actions</div>
-    <div class="highlight-card">
-      <ul class="action-list">
-        <li>
-          <div class="action-num">1</div>
-          <div class="action-body">
-            <strong>Send the June Facebook or Later detailed post export when available</strong>
-            <p>That is the one missing dataset still blocking confident platform-level learning on Facebook.</p>
+      <div class="section">
+        <div class="section-title">What Is Working Right Now</div>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">Search + Direct Sessions</div>
+            <div class="kpi-value val-green">499</div>
+            <div class="kpi-trend trend-up">Upstream traffic is coming from the right places</div>
+            <div class="kpi-note">Current visitor-source window: direct 264 + Google organic 235</div>
           </div>
-        </li>
-        <li>
-          <div class="action-num">2</div>
-          <div class="action-body">
-            <strong>Keep sharing real project photos whenever possible</strong>
-            <p>They remain one of the strongest trust-building assets available for July and August content.</p>
-          </div>
-        </li>
-        <li>
-          <div class="action-num">3</div>
-          <div class="action-body">
-            <strong>Review the estimate pathway on the Request Free Estimate page</strong>
-            <p>It should match the same calm, practical, no-pressure tone being used in the content.</p>
-          </div>
-        </li>
-        <li>
-          <div class="action-num">4</div>
-          <div class="action-body">
-            <strong>Share any August promotions, service priorities, or local project highlights</strong>
-            <p>That will let next month’s content build from real operational priorities instead of generic seasonal assumptions.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="section">
-    <div class="section-title">Web Addresses Reviewed This Month</div>
-    <div class="highlight-card">
-      <ul class="checklist">
-        <li><span class="check-done">✓</span> <a href="https://www.constructionconcern.com/" target="_blank" rel="noreferrer">https://www.constructionconcern.com/</a></li>
-        <li><span class="check-done">✓</span> <a href="https://www.constructionconcern.com/contact" target="_blank" rel="noreferrer">https://www.constructionconcern.com/contact</a></li>
-        <li><span class="check-done">✓</span> <a href="https://www.constructionconcern.com/about-us" target="_blank" rel="noreferrer">https://www.constructionconcern.com/about-us</a></li>
-        <li><span class="check-done">✓</span> <a href="https://www.constructionconcern.com/request-free-estimate" target="_blank" rel="noreferrer">https://www.constructionconcern.com/request-free-estimate</a></li>
-        <li><span class="check-done">✓</span> <a href="https://www.constructionconcern.com/blog" target="_blank" rel="noreferrer">https://www.constructionconcern.com/blog</a></li>
-        <li><span class="check-done">✓</span> <a href="https://www.constructionconcern.com/post/boxed-in-eaves-fire-safety" target="_blank" rel="noreferrer">https://www.constructionconcern.com/post/boxed-in-eaves-fire-safety</a></li>
-      </ul>
-    </div>
-  </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Homepage Sessions</div>
+            <div class="kpi-value">296</div>
+            <div class="kpi-trend trend-up">Brand interest is still healthy</div>
+            <div class="kpi-note">252 unique visitors in the current traffic window</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Top Blog Views</div>
+            <div class="kpi-value val-green">163</div>
+            <div class="kpi-trend trend-up">Boxed-eaves fire-safety remains the lead asset</div>
+            <div class="kpi-note">128 unique visitors on the strongest post</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Contact Page Sessions</div>
+            <div class="kpi-value">99</div>
+            <div class="kpi-trend trend-up">Trust-page demand is real</div>
+            <div class="kpi-note">About Us added 74 more sessions in the same window</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Newsletter Deliveries</div>
+            <div class="kpi-value">523</div>
+            <div class="kpi-trend trend-up">The list is still reachable</div>
+            <div class="kpi-note">June 30 send delivered to 523 recipients; May 26 delivered to 529</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Boxed-Eaves Search Impressions</div>
+            <div class="kpi-value">320</div>
+            <div class="kpi-trend trend-up">Non-brand demand is established</div>
+            <div class="kpi-note">`boxed eaves` 127 + `boxed in eaves` 110 + `boxed eaves fire protection` 83</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Channel Review — What Is Working and What Needs Correction</div>
+        <div class="table-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Channel</th>
+                  <th>What Is Working</th>
+                  <th>What Needs Correction</th>
+                  <th>Our Move</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Website + Search</strong></td>
+                  <td>Direct and Google generated 499 sessions in the current source window. The home page drew 296 sessions, Contact drew 99, and About Us drew 74.</td>
+                  <td>Traffic clusters around trust pages more than service and estimate pages, so confidence is building faster than conversion intent.</td>
+                  <td>Strengthen internal links and calls to action from the pages people already trust.</td>
+                </tr>
+                <tr>
+                  <td><strong>Blog</strong></td>
+                  <td>The boxed-eaves fire-safety post produced 163 views and 128 unique visitors. Search demand around boxed eaves and fire protection is established.</td>
+                  <td>Newer blog posts have not approached the lead article, so topic selection needs to stay tighter.</td>
+                  <td>Publish more sequels and adjacent posts around fire protection, soffits, and diagnostic exterior problems.</td>
+                </tr>
+                <tr>
+                  <td><strong>Newsletter</strong></td>
+                  <td>The recent sends still reached the list reliably with 523 and 529 deliveries.</td>
+                  <td>Both visible sends produced only 6 unique clicks, or about a 1.1% click rate.</td>
+                  <td>Focus each email on one clear problem, one featured article, and one stronger next-step CTA.</td>
+                </tr>
+                <tr>
+                  <td><strong>Instagram</strong></td>
+                  <td>Instagram still generated 243 June views and held the audience at 364 followers.</td>
+                  <td>Reach stayed soft at 73 for the month, and follower count slipped by 1.</td>
+                  <td>Keep posting, but use fewer, sharper educational posts tied to the strongest blog and newsletter topics.</td>
+                </tr>
+                <tr>
+                  <td><strong>Threads</strong></td>
+                  <td>Threads maintained light visibility with 35 June views.</td>
+                  <td>Engagement is minimal at 4 likes and no replies, reposts, or quotes.</td>
+                  <td>Keep Threads low-effort and repurposed; it should support the campaign, not lead it.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">The Winning Strategy</div>
+        <div class="highlight-card" style="margin-bottom:20px;">
+          <p>Construction Concern should continue social media posting, but social should no longer be treated as the lead growth engine. The winning model right now is blog-led, newsletter-backed, and social-amplified. In other words: do more with blogs and newsletters, and use social to extend the reach of the topics that are already proving themselves.</p>
+        </div>
+        <div class="two-col">
+          <div class="highlight-card">
+            <h3>Primary Growth Engine: Blog + Newsletter</h3>
+            <ul class="highlight-list">
+              <li>
+                <span class="hl-icon">1</span>
+                <div class="hl-text">
+                  <strong>Lead With Proven Topics</strong>
+                  <span>Build around boxed eaves, fire protection, soffits, hot-room diagnostics, and whole-home problem solving.</span>
+                </div>
+              </li>
+              <li>
+                <span class="hl-icon">2</span>
+                <div class="hl-text">
+                  <strong>Use Newsletter as Nurture</strong>
+                  <span>Turn the strongest article into an email with one clear takeaway and one clear next step.</span>
+                </div>
+              </li>
+              <li>
+                <span class="hl-icon">3</span>
+                <div class="hl-text">
+                  <strong>Follow Real Demand</strong>
+                  <span>Let search queries and top-performing web pages set the monthly agenda.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Support Layer: Social</h3>
+            <ul class="highlight-list">
+              <li>
+                <span class="hl-icon">1</span>
+                <div class="hl-text">
+                  <strong>Keep Instagram Active</strong>
+                  <span>Use short, practical, saveable posts that pull directly from the strongest blog and newsletter themes.</span>
+                </div>
+              </li>
+              <li>
+                <span class="hl-icon">2</span>
+                <div class="hl-text">
+                  <strong>Keep Threads Light</strong>
+                  <span>Repurpose only. Threads should reinforce the message, not consume the main effort.</span>
+                </div>
+              </li>
+              <li>
+                <span class="hl-icon">3</span>
+                <div class="hl-text">
+                  <strong>Change the Success Metric</strong>
+                  <span>Use social to build recognition, trust, saves, and conversations instead of expecting it to drive most traffic.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">What Needs to Be Fixed Now</div>
+        <div class="highlight-card">
+          <ul class="action-list">
+            <li>
+              <div class="action-num">1</div>
+              <div class="action-body">
+                <strong>Tighten the conversion path from trust pages to service and estimate pages</strong>
+                <p>The traffic is reaching the right reassurance pages first. Those pages now need clearer next steps.</p>
+              </div>
+            </li>
+            <li>
+              <div class="action-num">2</div>
+              <div class="action-body">
+                <strong>Make newsletters more focused and more actionable</strong>
+                <p>Each send should center on one homeowner problem, one featured article, and one primary CTA.</p>
+              </div>
+            </li>
+            <li>
+              <div class="action-num">3</div>
+              <div class="action-body">
+                <strong>Keep blog topics closer to the proven lane</strong>
+                <p>The current winner is not broad summer content. It is practical fire-protection and exterior-diagnostic education.</p>
+              </div>
+            </li>
+            <li>
+              <div class="action-num">4</div>
+              <div class="action-body">
+                <strong>Use more real project proof wherever possible</strong>
+                <p>Trust is already a strength for this brand, and authentic project evidence will reinforce it.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">What Needs to Go</div>
+        <div class="highlight-card">
+          <ul class="checklist">
+            <li><span class="check-done">✓</span> Remove generic seasonal filler that is not tied to a proven homeowner problem or search signal.</li>
+            <li><span class="check-done">✓</span> Remove the assumption that social posts should drive most discovery on their own.</li>
+            <li><span class="check-done">✓</span> Remove channel sprawl, where every platform gets equal energy regardless of results.</li>
+            <li><span class="check-done">✓</span> Remove standalone posts that are disconnected from the stronger blog and newsletter themes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Web Addresses Reviewed This Month</div>
+        <div class="highlight-card">
+          <ul class="checklist">
+            <li><span class="check-done">✓</span> https://www.constructionconcern.com/</li>
+            <li><span class="check-done">✓</span> https://www.constructionconcern.com/contact</li>
+            <li><span class="check-done">✓</span> https://www.constructionconcern.com/about-us</li>
+            <li><span class="check-done">✓</span> https://www.constructionconcern.com/request-free-estimate</li>
+            <li><span class="check-done">✓</span> https://www.constructionconcern.com/blog</li>
+            <li><span class="check-done">✓</span> https://www.constructionconcern.com/post/boxed-in-eaves-fire-safety</li>
+          </ul>
+        </div>
+      </div>
+
+  </div><!-- /container -->
+
+  <footer>
+    <strong>Arc &amp; Anthem</strong> · Content Operations for Construction Concern ·
+    <a href="https://constructionconcern.com" target="_blank">constructionconcern.com</a> ·
+    Newhall, CA — Serving LA &amp; Ventura County
+    <br><br>
+    Questions about this dashboard? Contact your Arc &amp; Anthem account lead.
+  </footer>
+
+  </body>
+  </html>
 
 </div><!-- /container -->
 
